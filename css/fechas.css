@@ -1,0 +1,451 @@
+
+
+/*RESET*/
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none; 
+}
+
+
+body{
+    background-image: url(../assets/img/fondo-main.jpg); /*background*/
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*HEADER*/
+
+.header{
+    background-color: black;
+    width: 100vw;
+    height: 20vh;
+    position: fixed;
+    top:0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+}
+
+.header .header__logo{
+    height: 15vh;
+    width: 11vw;
+}
+
+.header .header__logo img{
+    height: 100%;
+    width: 100%;
+}
+
+.header .header__menu{
+    display: flex;
+    flex-direction: row;
+}
+
+.header .header__menu a{
+    margin-left:15px;       /* box modeling */
+    padding: 20px;          
+    background-color: #FFD900;      /*colores*/
+    color: black;
+    font-family: 'RocknRoll One', sans-serif;      
+    font-weight:900;
+}
+
+.header .header__menu a:hover{
+    background-color: black;
+    color: #f2ce00;
+}
+
+.header .header__menu .activado{
+    background-color: black;
+    color: #f2ce00;
+}
+
+
+
+/*FOOTER*/
+
+.footer{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 15vh;
+    width: 100vw;
+    z-index: 1;
+    padding-bottom: 10px;
+    margin-top: auto;
+}
+
+.footer h4{
+    color: white;
+    margin-left: 100px;
+}
+
+.footer div{
+    height: 100%;
+    margin-right: 100px;
+}
+
+.footer div a img{
+    height: 100%;
+    width: 8vw;
+    padding: 20px;
+}
+
+
+
+
+/*Comienzo index.html*/
+.inicio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagenPrincipal{
+    width: 100vw;
+    height: 85vh;
+    margin-top: 90px;
+}
+
+.imagenPrincipal img{
+    width: 100%;        
+    height: 100%;
+}
+
+.inicio .inicio__descripcion{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.inicio .inicio__biografia{
+    width: 60vw;
+    text-align: justify;
+    padding: 20px 70px 20px 40px;
+    font-family: 'Ranga', cursive;
+    font-size: 25px; 
+}
+
+.inicio .inicio__musica{
+    text-align: center;  /* modificadores de texto */
+    letter-spacing: 3px;
+    margin-right: 15px;
+    font-style: italic;
+}
+
+.inicio .inicio__musica a img{
+    margin-top: 20px;
+    height: 22vh;
+    width: 23vw;
+}
+
+/*Fin index.html*/
+
+
+
+/*Comienzo nosotros.html*/
+
+.miembros{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    width: 100vw;
+}
+
+
+.tituloPrincipal{
+    font-family: 'Knewave', cursive;
+    font-size: 50px;
+    letter-spacing: 5px;
+    margin-top: 50px;
+}
+
+.miembros .miembros__titulo{
+    margin:80px 0px;
+}
+
+.miembros .miembros__img{
+    height: 40vh;           /*settings img*/
+    width: 15vw;
+    border: 4px white double;
+}
+
+.miembros .miembros__nombre{
+    font-family: 'Oregano', cursive;
+    font-size: 60px;
+    letter-spacing: 3px;
+    color: white;
+    font-weight: 900;
+    padding: 70px 0px;
+    background-color: black;
+    border-radius: 60%;
+}
+
+.miembros .miembros__nombre span{
+    font-style: italic;
+    font-weight: 200;
+}
+
+.miembros .miembros__left{
+    width: 60vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.miembros .miembros__right{
+    width: 60vw;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.miembros .miembros__right.miembros__right--ultima{
+    margin-bottom: 50px;
+}
+
+/*Fin nosotros.html*/
+
+
+
+/*Comienzo conciertos.html*/
+
+.multimedia{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.multimedia .multimedia__fotos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.multimedia .multimedia__fotos .multimedia__subtituloFoto{
+    margin-bottom: 60px;
+    margin-top: 30px;
+    position: relative;
+    right:400px;
+    font-size: 50px;
+    text-decoration: underline;
+}
+
+.multimedia .multimedia__fotos .multimedia__filaFotos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 40vh;
+    width: 100%;
+    margin-bottom: 100px;  
+}
+
+.multimedia .multimedia__fotos .multimedia__filaFotos .multimedia__foto{
+    height: 100%;
+    width: 30%;
+    border: 3px white solid;
+}
+
+.multimedia .multimedia__fotos .multimedia__filaFotos .multimedia__foto img{
+    height: 100%;
+    width: 100%;
+}
+
+.multimedia .multimedia__videos .multimedia__subtituloVideo{
+    font-size: 50px;
+    text-decoration: underline;
+    margin-bottom: 40px;
+    position: relative;
+    left: 100px;
+}
+
+.multimedia .multimedia__videos .multimedia__filaVideos{
+    height: 60vh;
+    width: 100%;
+}
+
+.multimedia .multimedia__videos .multimedia__filaVideos iframe{
+    margin: 20px;
+}
+
+/*Fin conciertos.html*/
+
+
+
+/*Comienzo prox_fechas.html*/
+
+.fechas{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fechas .fechas__show{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    padding-bottom: 10px;
+    border-bottom: 2px rgba(255, 255, 255, 0.575) dotted;   /*border*/
+    
+}
+
+.fechas .fechas__show .fechas__flyer h3{
+    font-family: 'Permanent Marker', cursive;
+    margin-left: 50px;
+    font-size: 30px;
+    letter-spacing: 3px;
+    padding-bottom: 10px;
+    width: 50vw;
+    text-align:justify;
+}
+
+.fechas .fechas__show .fechas__flyer img{
+    height: 50vh;
+    width: 30vw;
+    margin-left: 40px;
+}
+
+.fechas .fechas__show .fechas__descripcion{
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    
+}
+
+.fechas .fechas__show .fechas__descripcion p{
+    text-align: justify;    
+    margin-right: 150px;
+    font-style: italic;
+    font-family: 'Bebas Neue', cursive;
+    line-height: 30px;
+    font-size: 20px;
+}
+
+.fechas .fechas__show .fechas__descripcion a{
+    padding: 30px;
+    margin-top: 30px;
+    background-color: #FFD900;
+    color: black;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 3px;
+}
+
+.fechas .fechas__show .fechas__descripcion a:hover{
+    background-color: black;
+    color: #f2ce00;
+}
+
+
+/*Fin prox_fechas.html*/
+
+
+
+/*Comienzo contactos.html*/
+
+.contacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 100px 0px;
+}
+
+.contacto .contacto__titulo{
+    margin-bottom: 30px;
+}
+
+.contacto .contacto__formulario{
+    width: 50vw;
+}
+
+.contacto .contacto__formulario .contacto__lineText{
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.contacto .contacto__formulario .contacto__lineText input{
+    width: 100%;
+    height: 5vh;
+    font-weight: bold;
+}
+
+.contacto .contacto__formulario .contacto__sexo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0px;
+    width: 80%;
+    font-size: 25px;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.contacto .contacto__formulario .contacto__areaText{
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.contacto .contacto__formulario .botton{
+    height: 10vh;
+    margin: 10px;
+}
+
+.contacto .contacto__formulario .botton input{
+    height: 100%;
+    width: 16vw;
+    background-color: #FFD900;
+    color: black;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 30px;
+    text-align: left;
+    margin-left: 10px;
+    padding-left: 5px;
+} 
+
+.contacto .contacto__formulario .botton input:hover{
+    background-color: black;
+    color: #f2ce00;
+}
+
+/*Fin contactos.html*/
+
+
+
+
+
+
+
+
+
+
+
+
