@@ -10,14 +10,23 @@ body{
     color: white;
 }
 
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+}
+
 
 /*----------------COMIENZO HEADER----------------*/
-.grid-cont__header{
+.grid-container .header{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    position: fixed;
     width: 100%;
     height: auto;
     background-color: black;
@@ -25,17 +34,17 @@ body{
     grid-area: header;
 }
 
-.grid-cont__header .grid-cont__headerLogo{
+.grid-container .header .header__logo{
     width: auto;
     height: 15vh;
 }
 
-.grid-cont__header .grid-cont__headerLogo img{
+.grid-container .header .header__logo img{
     width: 100%;
     height: 100%;
 }
 
-.grid-cont__header .grid-cont__headerMenu a{
+.grid-container .header .header__menu a{
     background-color: #FFD900;
     color: black;
     font-family: 'RocknRoll One', sans-serif;      
@@ -44,12 +53,12 @@ body{
     margin-left: 15px;
 }
 
-.grid-cont__header .grid-cont__headerMenu a:hover{
+.grid-container .header .header__menu a:hover{
     background-color: black;
     color: #f2ce00;
 }
 
-.grid-cont__header .grid-cont__headerMenu .activado{
+.grid-container .header .header__menu .activado{
     background-color: black;
     color: #f2ce00;
 }
@@ -59,17 +68,20 @@ body{
 
 /*----------------COMIENZO FOOTER----------------*/
 
-.grid-cont__footer{
+.grid-container .footer{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     background-color: black;
     font-size: 20px;
-    height: 15vh;
+    height: auto;
+    padding: 20px 0px;
+    grid-area: footer;
+    
 }
 
-.grid-cont__footer .grid-cont__redes{
+.grid-container .footer .footer__redes{
     display: flex;
     flex-direction: row;
     margin-left: 100px;
@@ -77,7 +89,7 @@ body{
     height: auto;
 }
 
-.grid-cont__footer .grid-cont__redes img{
+.grid-container .footer .footer__redes img{
     width: 50%;
     height: auto;
 }
@@ -102,7 +114,7 @@ body{
     grid-template-rows: auto 40vh auto auto auto;
 }
 
-.grid-cont-tituloPrincipal{
+.grid-container main .tituloPrincipal{
     grid-area: titulo;
     font-family: 'Knewave', cursive;
     font-size: 50px;
@@ -192,33 +204,15 @@ body{
 
 /*----------------COMIENZO PROX-FECHAS----------------*/
 
-.grid-cont-proxfechas{
-    display: grid;
-    grid-template-areas: 
-    "header"
-    "image"
-    "titulo"
-    "contenido"
-    "contenido"
-    "contenido"
-    "footer";
-}
-
-.grid-cont-imagenPrincipal{
-    margin-top: 70px;
+.grid-container main .imagenPrincipal{
     width: 100%;
-    height: 87vh;
+    height: 90vh;
     background-image: url(../assets/img/atila_banda.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    grid-area: image;
 }
 
-.grid-cont-proxfechas .grid-cont-proxfechas__fechas{
-    grid-area: contenido;
-}
-
-.grid-cont-proxfechas .grid-cont-proxfechas__fechas .grid-cont-proxfechas__fechasShow{
+.grid-container .main-proxfechas .main-proxfechas__fechas{
     display: grid;
     grid-template-areas: 
     "subtitulo  subtitulo"
@@ -229,7 +223,7 @@ body{
     margin-left: 20px;
 }
 
-.grid-cont-proxfechas .grid-cont-proxfechas__fechas .grid-cont-proxfechas__fechasShow h3{
+.grid-container .main-proxfechas .main-proxfechas__fechas h3{
     grid-area: subtitulo;
     font-family: 'Permanent Marker', cursive;
     font-size: 30px;
@@ -237,12 +231,12 @@ body{
     margin: 10px 0px;
 }
 
-.grid-cont-proxfechas .grid-cont-proxfechas__fechas .grid-cont-proxfechas__fechasShow img{
+.grid-container .main-proxfechas .main-proxfechas__fechas img{
     grid-area: flyer;
     width: 27vw;
 }
 
-.grid-cont-proxfechas .grid-cont-proxfechas__fechas .grid-cont-proxfechas__fechasShow p{
+.grid-container .main-proxfechas .main-proxfechas__fechas p{
     grid-area: parrafo;
     text-align: justify;
     font-style: italic;
@@ -253,7 +247,7 @@ body{
     padding: 0px 50px;
 }
 
-.grid-cont-proxfechas .grid-cont-proxfechas__fechas .grid-cont-proxfechas__fechasShow a{
+.grid-container .main-proxfechas .main-proxfechas__fechas a{
     grid-area: boton;
     background-color: #FFD900;
     color: black;
@@ -268,16 +262,13 @@ body{
     width: auto;
 }
 
-.grid-cont-proxfechas .grid-cont-proxfechas__fechas .grid-cont-proxfechas__fechasShow a:hover{
+.grid-container .main-proxfechas .main-proxfechas__fechas a:hover{
     background-color: black;
     color: #f2ce00;
 }
 
-.grid-cont__footer{
-    grid-area: footer;
-}
-
 /*----------------FIN PROX-FECHAS----------------*/
+
 
 
 /* ----------------MEDIA QUERIES---------------- */
@@ -285,25 +276,25 @@ body{
 @media (min-width:320px) and (max-width:767px){
 
     /*-------------------INICIO HEADER-------------------*/
-    .grid-cont__header{
+    .grid-container .header{
         padding: 10px 0px;
         position: static;
     }
 
-    .grid-cont__header .grid-cont__headerLogo{
+    .grid-container .header .header__logo{
         margin-left: auto;
         
     }
 
 
-    .grid-cont__header .grid-cont__headerMenu{
+    .grid-container .header .header__menu{
         display: flex;
         flex-direction: column;
         margin:0 auto
         
     }
 
-    .grid-cont__header .grid-cont__headerMenu a{
+    .grid-container .header .header__menu a{
         margin: 0;
         font-size: 12px;
         padding: 5px 20px;
@@ -316,18 +307,18 @@ body{
 
     /*-------------------INICIO PROX-FECHAS-------------------*/
 
-    .grid-cont-imagenPrincipal{
+    .grid-container main .imagenPrincipal{
         margin: 0;
-        height: 75vh;
+        height: 25vh;
         background-size: cover;
         background-position: 40% 50%;
     }
 
-    .grid-cont-tituloPrincipal{
+    .grid-container main .tituloPrincipal{
         font-size: 30px;
     }
 
-    .grid-cont-proxfechas .grid-cont-proxfechas__fechas .grid-cont-proxfechas__fechasShow{
+    .grid-container .main-proxfechas .main-proxfechas__fechas{
         grid-template-areas: 
         "subtitulo  subtitulo"
         "flyer      flyer"
@@ -337,22 +328,22 @@ body{
         margin-right: 20px;
     }
 
-    .grid-cont-proxfechas .grid-cont-proxfechas__fechas .grid-cont-proxfechas__fechasShow h3{
-        font-size: 20px;
+    .grid-container .main-proxfechas .main-proxfechas__fechas h3{
+        font-size: 30px;
         width: 100%;
     }
 
-    .grid-cont-proxfechas .grid-cont-proxfechas__fechas .grid-cont-proxfechas__fechasShow img{
+    .grid-container .main-proxfechas .main-proxfechas__fechas img{
         width: 76vw;
         justify-self: center;
     }
 
-    .grid-cont-proxfechas .grid-cont-proxfechas__fechas .grid-cont-proxfechas__fechasShow p{
+    .grid-container .main-proxfechas .main-proxfechas__fechas p{
         width: 100%;
         padding: 5px 0px;
     }
 
-    .grid-cont-proxfechas .grid-cont-proxfechas__fechas .grid-cont-proxfechas__fechasShow a{
+    .grid-container .main-proxfechas .main-proxfechas__fechas a{
         margin: 0;
         width: auto;
     }
@@ -362,17 +353,18 @@ body{
 
     /*-------------------INICIO FOOTER-------------------*/
 
-    .grid-cont__footer h4{
-        font-size: 15px;
+    .grid-container .footer h4{
+        font-size: 16px;
     }
 
-    .grid-cont__footer .grid-cont__redes{
+    .grid-container .footer .footer__redes{
         margin: 0;
         width: 25%;
     }
 
     /*-------------------FIN FOOTER-------------------*/
 
+    
 
     /*-------------------INICIO CONCIERTOS-------------------*/
 
@@ -403,22 +395,22 @@ body{
 
     /*-------------------INICIO HEADER-------------------*/
 
-    .grid-cont__header{
+    .grid-container .header{
         flex-direction: column;
         padding-top: 0px;
     }
 
-    .grid-cont__header .grid-cont__headerLogo{
+    .grid-container .header .header__menu{
         align-self: flex-start;
         margin-left: 100px;
         height: 21vh;
     }
 
-    .grid-cont__header .grid-cont__headerMenu{
+    .grid-container .header .header__menu{
         flex-direction: row;
     }
 
-    .grid-cont__header .grid-cont__headerMenu a{
+    .grid-container .header .header__menu a{
         margin: 0;
         font-size: 12px;
         padding: 10px 30px;
@@ -428,8 +420,8 @@ body{
 
     /*-------------------FIN HEADER-------------------*/
 
-    .grid-cont-imagenPrincipal{
-        margin-top: 120px;
+    .grid-container main .imagenPrincipal{
+        height: 40vh;
     }
 
     /*-------------------INICIO CONCIERTOS-------------------*/
