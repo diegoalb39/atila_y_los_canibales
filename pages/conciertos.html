@@ -21,14 +21,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> <!-- fontstyle subtitulos -->
 </head>
 <body>
-    <div class="grid-cont-conciertos"> <!-- Comienzo contenedor-grid -->
-        <header class="grid-cont__header"> <!--Comienzo header-->
-            <div class="grid-cont__headerLogo">
+    <div class="grid-container"> <!--Comienzo contenedor grid-->
+        <header class="header"> <!--Comienzo header-->
+            <div class="header__logo">
                 <a href="../index.html">
                     <img src="../assets/img/logo-atilayloscanibales.jpeg" alt="logo de Atila y Los Canibales">
                 </a>
             </div>
-            <nav class="grid-cont__headerMenu"> <!--Comienzo nav-->
+            <nav class="header__menu"> <!--Comienzo nav-->
                 <a href="../index.html">INICIO</a>
                 <a href="nosotros.html">NOSOTROS</a>
                 <a class="activado" href="#">CONCIERTOS</a>
@@ -37,41 +37,49 @@
             </nav> <!--Fin nav-->
         </header> <!--Fin header-->
 
-        <section class="grid-cont-tituloPrincipal">
-            <h1>CONCIERTOS</h1>
-        </section>
-            
-        <section class="grid-cont-conciertos__galeriaF"> <!--Comienzo section-->
-            <h2 class="grid-cont-subtitulo">FOTOS</h2>
-            <div class="grid-cont-conciertos__fotos">
-                <img src="../assets/img/concierto10.jpeg" alt="recital">               
-                <img src="../assets/img/concierto11.jpeg" alt="recital">
-                <img src="../assets/img/concierto1.jpeg" alt="recital">            
-                <img src="../assets/img/concierto6.jpeg" alt="concierto de Atila y Los Canibales">
-                <img src="../assets/img/concierto12.jpeg" alt="concierto">
-                <img src="../assets/img/concierto5.jpg" alt="recital">
-                <img src="../assets/img/concierto4.jpg" alt="show">
-                <img src="../assets/img/concierto9.jpeg" alt="show">                      
-                <img src="../assets/img/concierto8.jpg" alt="concierto">
-                <img src="../assets/img/concierto7.jpeg" alt="concierto">
-            </div>
-        </section> <!--Fin section-->
+        <main class="main-conciertos"> <!--Comienzo main-->
 
-        <section class="grid-cont-conciertos__galeriaV"> <!--Comienzo section-->
-            <h2 class="grid-cont-subtitulo">VIDEOS</h2>
-            <div class="grid-cont-conciertos__videos">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/_822p_kmPnY" title="Fusilados por la cruz roja - Atila y los Canibales" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/jHC9Pv8JHQk" title="Canción para naufragios - Atila y los Canibales" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/lJbmVYF5ISw" title="El pibe de los astilleros - Atila y los Canibales" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>   
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/SEX3A7gR3Fo" title="Todo un palo - Atila y los Canibales" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/hlldzb35fcE" title="Toxi taxi - Atila y los Canibales" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>           
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/dnmQadgRLrs" title="Rock para los dientes - Atila y los Canibales" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        </section> <!--Fin section-->
+            <section class="tituloPrincipal">
+                <h1>CONCIERTOS</h1>
+            </section>
+                
+            <section class="main-conciertos__galeriaF"> <!--Comienzo GALERIA FOTOS-->
+                <h2 class="subtitulo">FOTOS</h2>
+                <div class="main-conciertos__fotos">
+                    <div class="foto "><img src="../assets/img/concierto6.jpeg" alt="recital"></div> 
+                    <div class="foto wide no-small"><img src="../assets/img/concierto5.jpg" alt="recital"></div>
+                    <div class="foto tall"><img src="../assets/img/concierto1.jpeg" alt="show"></div>
+                    <div class="foto"><img src="../assets/img/concierto4.jpg" alt="concierto"></div>
+                    <div class="foto tall"><img src="../assets/img/concierto9.jpeg" alt="recital"></div> 
+                    <div class="foto"><img src="../assets/img/concierto11.jpeg" alt="show"></div>
+                    <div class="foto giant"><img src="../assets/img/concierto14.jpg" alt="banda"> </div>
+                    <div class="foto"><img src="../assets/img/concierto7.jpeg" alt="concierto"></div>
+                    <div class="foto"><img src="../assets/img/concierto12.jpeg" alt="concierto"></div>
+                    <div class="foto "><img src="../assets/img/concierto10.jpeg" alt="banda"></div>
+                    <div class="foto wide no-small"><img src="../assets/img/concierto15.jpg" alt="banda"> </div>
+                    <div class="foto wide no-small"><img src="../assets/img/concierto2.jpg" alt="guitarrista"></div>
+                    <div class="foto"><img src="../assets/img/concierto16.jpeg" alt="guitarrista"></div>
+                    <div class="foto"><img src="../assets/img/concierto3.jpeg" alt="show"></div>
+                    <div class="foto wide"><img src="../assets/img/concierto8.jpg" alt="recital"></div>
+                </div>
+            </section> <!--Fin GALERIA FOTOS-->
 
-        <footer class="grid-cont__footer"> <!--Comienzo footer-->
+            <section class="main-conciertos__galeriaV"> <!--Comienzo GALERIA VIDEOS-->
+                <h2 class="subtitulo">VIDEOS</h2>
+                <div class="main-conciertos__videos">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/_822p_kmPnY" title="Fusilados por la cruz roja - Atila y los Canibales" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/jHC9Pv8JHQk" title="Canción para naufragios - Atila y los Canibales" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/lJbmVYF5ISw" title="El pibe de los astilleros - Atila y los Canibales" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>   
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/SEX3A7gR3Fo" title="Todo un palo - Atila y los Canibales" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/hlldzb35fcE" title="Toxi taxi - Atila y los Canibales" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>           
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dnmQadgRLrs" title="Rock para los dientes - Atila y los Canibales" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </section> <!--Fin GALERIA VIDEOS-->
+        </main> <!--Fin main-->
+
+        <footer class="footer"> <!--Comienzo footer-->
             <h4>Copyright Albornoz Diego©</h4>
-            <div class="grid-cont__redes">
+            <div class="footer__redes">
                 <a href="https://www.youtube.com/channel/UCpOtcA5asNJcu6KfO-jrUVA" target="_blank">
                     <img src="../assets/img/logo_youtube.jpg" alt="Youtube">
                 </a>
@@ -80,6 +88,6 @@
                 </a>
             </div>
         </footer> <!--Fin footer-->
-    </div> <!-- Fin contenedor-grid -->
+    </div> <!--Fin contenedor grid-->
 </body>
 </html>
