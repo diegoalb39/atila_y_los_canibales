@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atila y Los Canibales</title>
     <link rel="shotcut icon" href="./assets/img/icono-atilayloscanibales.jpg">
-    <link rel="stylesheet" href="./css/fechas.css">
+    <link rel="stylesheet" href="./css/responsive.css">
     
 
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
@@ -16,11 +16,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ranga&display=swap" rel="stylesheet"> <!--fontstyle descripcion__biografia-->
-    
-    
-
 </head>
 <body>
+    <div class="grid-container">
         <header class="header"> <!--Comienzo header-->
             <div class="header__logo">
                 <a href="../index.html" >
@@ -36,18 +34,18 @@
             </nav> <!--Fin nav-->
         </header> <!--Fin header-->
 
-        <main class="inicio"> <!--Comienzo main-->
-            <section class="imagenPrincipal">
-                <img src="./assets/img/atila_banda.jpg" alt="Atila y Los Canibales">
-            </section>
-            <div class="inicio__descripcion">
-                <section class="inicio__biografia"> 
+        <main class="main-index"> <!--Comienzo main-->
+
+            <section class="imagenPrincipal" style="background-image: url(./assets/img/atila_banda.jpg);"></section> <!-- SECTION VACIO PARA BACKGROUND-IMAGE -->
+
+            <div class="main-index__info">
+                <section class="main-index__biografia"> 
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At beatae totam libero facere voluptatem, quod reprehenderit eum neque explicabo odit dolorem, et officia ipsa repellat id nostrum velit, laudantium dolore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem qui ipsam veritatis cupiditate, nisi harum ad modi minima porro est, rerum necessitatibus debitis distinctio. Quasi, explicabo. Facere nulla est nostrum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nostrum sit odio impedit accusamus accusantium quas vitae itaque voluptatem tenetur nesciunt officiis aliquid, earum quisquam, quidem eum fuga, nemo sed.</p>
                 </section> 
-                <section class="inicio__musica"> 
+                <section class="main-index__musica"> 
                     <h2>TRIBUTO A PATRICIO REY Y SUS REDONDITOS DE RICOTA:</h2>
                     <a href="https://www.youtube.com/watch?v=zwDLbNTPvgA" target="_blank">
-                        <img src="./assets/img/gulp.jpg" alt="Disco 'Gulp' de Patricio Rey y sus Redonditos de Ricota">
+                        <img src="./assets/img/index-gulp.jpg" alt="Disco 'Gulp' de Patricio Rey y sus Redonditos de Ricota">
                     </a>
                 </section> 
             </div>
@@ -55,7 +53,7 @@
 
         <footer class="footer"> <!--Comienzo footer-->
             <h4>Copyright Albornoz Diego©</h4>
-            <div>
+            <div class="footer__redes">
                 <a href="https://www.youtube.com/channel/UCpOtcA5asNJcu6KfO-jrUVA" target="_blank">
                     <img src="./assets/img/logo_youtube.jpg" alt="Youtube">
                 </a>
@@ -64,5 +62,6 @@
                 </a>
             </div>
         </footer> <!--Fin footer-->
+    </div>
 </body>
 </html>
