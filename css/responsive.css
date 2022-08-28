@@ -136,12 +136,54 @@ body{
     background-size: 100% 100%;
 }
 
-
-
-
-
-
 /*----------------FIN INDEX----------------*/
+
+
+/*----------------COMIENZO NOSOTROS----------------*/
+
+.main-nosotros{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-nosotros .main-nosotros__miembros{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.main-nosotros .main-nosotros__miembros h2{
+    font-family: 'Oregano', cursive;
+    font-size: 60px;
+    letter-spacing: 3px;
+    color: white;
+    font-weight: 900;
+    padding: 70px 0px;
+    background-color: black;
+    border-radius: 45%;
+    text-align: center;
+}
+
+.main-nosotros .main-nosotros__miembros span{
+    font-style: italic;
+    font-weight: 200;
+}
+
+.main-nosotros .main-nosotros__miembros.reverse{
+    flex-direction: row-reverse;
+}
+
+.main-nosotros .main-nosotros__miembros img{
+    border: 4px white double;
+}
+
+
+/*----------------FIN NOSOTROS----------------*/
 
 
 /*----------------COMIENZO CONCIERTOS----------------*/
@@ -226,7 +268,7 @@ body{
 
 
 
-.grid-container .main-proxfechas .main-proxfechas__fechas{
+.main-proxfechas .main-proxfechas__fechas{
     display: grid;
     grid-template-areas: 
     "subtitulo  subtitulo"
@@ -237,7 +279,7 @@ body{
     margin-left: 20px;
 }
 
-.grid-container .main-proxfechas .main-proxfechas__fechas h3{
+.main-proxfechas .main-proxfechas__fechas h3{
     grid-area: subtitulo;
     font-family: 'Permanent Marker', cursive;
     font-size: 30px;
@@ -245,12 +287,12 @@ body{
     margin: 10px 0px;
 }
 
-.grid-container .main-proxfechas .main-proxfechas__fechas img{
+.main-proxfechas .main-proxfechas__fechas img{
     grid-area: flyer;
     width: 27vw;
 }
 
-.grid-container .main-proxfechas .main-proxfechas__fechas p{
+.main-proxfechas .main-proxfechas__fechas p{
     grid-area: parrafo;
     text-align: justify;
     font-style: italic;
@@ -261,7 +303,7 @@ body{
     padding: 0px 50px;
 }
 
-.grid-container .main-proxfechas .main-proxfechas__fechas a{
+.main-proxfechas .main-proxfechas__fechas a{
     grid-area: boton;
     background-color: #FFD900;
     color: black;
@@ -276,12 +318,13 @@ body{
     width: auto;
 }
 
-.grid-container .main-proxfechas .main-proxfechas__fechas a:hover{
+.main-proxfechas .main-proxfechas__fechas a:hover{
     background-color: black;
     color: #f2ce00;
 }
 
 /*----------------FIN PROX-FECHAS----------------*/
+
 
 
 
@@ -354,9 +397,37 @@ body{
     /*-------------------FIN INDEX-------------------*/
 
 
+    /*-------------------COMIENZO NOSOTROS-------------------*/
+
+    .grid-container .main-nosotros .tituloPrincipal{
+        font-size: 40px;
+    }
+
+    .grid-container .main-nosotros .main-nosotros__miembros{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 45px;
+    }
+
+    .main-nosotros .main-nosotros__miembros h2{
+        font-size: 30px;
+        padding: 20px 0px;
+        border-radius: 35%;
+        margin-bottom: 5px;
+    }
+
+    .main-nosotros .main-nosotros__miembros img{
+        width: 50%;
+        height: auto;
+    }
+    
+    /*-------------------FIN NOSOTROS-------------------*/
+
+
     /*-------------------COMIENZO CONCIERTOS-------------------*/
 
-    .grid-container .main-conciertos .main-conciertos__galeriaF .main-conciertos__fotos .foto{
+    .main-conciertos .main-conciertos__galeriaF .main-conciertos__fotos .foto{
         margin-right: 30px;
     }
 
@@ -365,12 +436,12 @@ body{
         margin-left: 10px;
     }
 
-    .grid-container .main-conciertos .main-conciertos__galeriaV .main-conciertos__videos{
+    .main-conciertos .main-conciertos__galeriaV .main-conciertos__videos{
         grid-template-columns: 100%;
         grid-template-rows: repeat(6,auto);
     }
 
-    .grid-container .main-conciertos .main-conciertos__galeriaV .main-conciertos__videos iframe{
+    .main-conciertos .main-conciertos__galeriaV .main-conciertos__videos iframe{
         width: 95%;
         height: auto;
     }
@@ -391,7 +462,7 @@ body{
         font-size: 30px;
     }
 
-    .grid-container .main-proxfechas .main-proxfechas__fechas{
+    .main-proxfechas .main-proxfechas__fechas{
         grid-template-areas: 
         "subtitulo  subtitulo"
         "flyer      flyer"
@@ -401,22 +472,22 @@ body{
         margin-right: 20px;
     }
 
-    .grid-container .main-proxfechas .main-proxfechas__fechas h3{
+    .main-proxfechas .main-proxfechas__fechas h3{
         font-size: 30px;
         width: 100%;
     }
 
-    .grid-container .main-proxfechas .main-proxfechas__fechas img{
+    .main-proxfechas .main-proxfechas__fechas img{
         width: 76vw;
         justify-self: center;
     }
 
-    .grid-container .main-proxfechas .main-proxfechas__fechas p{
+    .main-proxfechas .main-proxfechas__fechas p{
         width: 100%;
         padding: 5px 0px;
     }
 
-    .grid-container .main-proxfechas .main-proxfechas__fechas a{
+    .main-proxfechas .main-proxfechas__fechas a{
         margin: 0;
         width: auto;
     }
@@ -428,20 +499,20 @@ body{
 
 /*-------------- COMIENZO GALERIA DE CONCIERTOS-------------- */
 @media (min-width:700px){
-    .grid-container .main-conciertos .main-conciertos__galeriaF .main-conciertos__fotos .tall{
+    .main-conciertos .main-conciertos__galeriaF .main-conciertos__fotos .tall{
         grid-row: span 2;
     }
     
-    .grid-container .main-conciertos .main-conciertos__galeriaF .main-conciertos__fotos .wide{
+    .main-conciertos .main-conciertos__galeriaF .main-conciertos__fotos .wide{
         grid-column: span 2;
     }
     
-    .grid-container .main-conciertos .main-conciertos__galeriaF .main-conciertos__fotos .giant{
+    .main-conciertos .main-conciertos__galeriaF .main-conciertos__fotos .giant{
         grid-column: span 2;
         grid-row: span 2;
     }
 
-    .grid-container .main-conciertos .main-conciertos__galeriaF .main-conciertos__fotos .no-small{
+    .main-conciertos .main-conciertos__galeriaF .main-conciertos__fotos .no-small{
         display: block;
     }
 }
@@ -506,7 +577,7 @@ body{
 
     /*-------------------COMIENZO CONCIERTOS-------------------*/
 
-    .grid-container .main-conciertos .main-conciertos__galeriaV .main-conciertos__videos iframe{
+    .main-conciertos .main-conciertos__galeriaV .main-conciertos__videos iframe{
         height: auto;
     }
 
