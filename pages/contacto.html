@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atila y Los Canibales</title>
     <link rel="shotcut icon" href="../assets/img/icono-atilayloscanibales.jpg">
-    <link rel="stylesheet" href="../css/fechas.css">
+    <link rel="stylesheet" href="../css/responsive.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,69 +21,73 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> <!--fontstyle contacto__sexo h3-->
 </head>
 <body>
-    <header class="header"> <!--Comienzo header-->
-        <div class="header__logo">
-            <a href="../index.html">
-                <img src="../assets/img/logo-atilayloscanibales.jpeg" alt="logo de Atila y Los Canibales">
-            </a>
-        </div>
-        <nav class="header__menu"> <!--Comienzo nav-->
-            <a href="../index.html">INICIO</a>
-            <a href="nosotros.html">NOSOTROS</a>
-            <a href="conciertos.html">CONCIERTOS</a>
-            <a href="prox_fechas.html">PROX FECHAS</a>
-            <a class="activado" href="#">CONTACTO</a>
-        </nav> <!--Fin nav-->
-    </header> <!--Fin header-->
+    <div class="grid-container"> <!--Comienzo contenedor grid-->
+        <header class="header"> <!--Comienzo header-->
+            <div class="header__logo">
+                <a href="../index.html">
+                    <img src="../assets/img/logo-atilayloscanibales.jpeg" alt="logo de Atila y Los Canibales">
+                </a>
+            </div>
+            <nav class="header__menu"> <!--Comienzo nav-->
+                <a href="../index.html">INICIO</a>
+                <a href="nosotros.html">NOSOTROS</a>
+                <a href="conciertos.html">CONCIERTOS</a>
+                <a href="prox_fechas.html">PROX FECHAS</a>
+                <a class="activado" href="#">CONTACTO</a>
+            </nav> <!--Fin nav-->
+        </header> <!--Fin header-->
 
-    <main class="contacto"> <!--Comienzo main-->
-        <section class="contacto__titulo tituloPrincipal">
-            <h1>CONTACTO</h1>
-        </section>
-        <section class="contacto__formulario"> <!--Comienzo section-->
-            <form action=""> 
-                <div class="contacto__lineText">
-                    <label for="nombre"></label>
-                    <input type="text" name="nombre" placeholder="Ingrese su nombre">
-                </div>
-                <div class="contacto__lineText">
-                    <label for="email"></label>
-                    <input type="email" name="email" placeholder="Ingrese su email">
-                </div>
-                <div class="contacto__sexo">
-                    <h3>Escoja su sexo:</h3>
-                    <label>
-                        Hombre
-                        <input type="radio" name="sexo">
-                    </label>
-                    <label>
-                        Mujer
-                        <input type="radio" name="sexo">
-                    </label>
-                    <label>
-                        Otro
-                        <input type="radio" name="sexo">
-                    </label>
-                </div>
-                <textarea class="contacto__areaText" name="texto"  cols="80" rows="10" placeholder="Déjanos tu mensaje!"></textarea>
-                <div class="botton">
-                    <input type="submit" value="Envía tu mensaje">
-                    <input type="reset" value="Limpia el formulario">
-                </div>
-            </form> 
-        </section> <!--Fin section-->
-    </main> <!--Fin main-->
+        <main class="main-contacto"> <!--Comienzo main-->
+            <section class="tituloPrincipal">
+                <h1>CONTACTO</h1>
+            </section>
 
-    <footer class="footer"> <!--Comienzo footer-->
-        <h4>Copyright Albornoz Diego©</h4>
-        <div>
-            <a href="https://www.youtube.com/channel/UCpOtcA5asNJcu6KfO-jrUVA" target="_blank">
-                <img src="../assets/img/logo_youtube.jpg" alt="Youtube">
-            </a>
-            <a href="https://www.instagram.com/atilayloscanibales/" target="_blank">
-                <img src="../assets/img/logo_instagram.jpg" alt="Instagram">
-            </a>
-        </div>
-    </footer> <!--Fin footer-->
+            <section class="main-contacto__formulario"> <!--Comienzo section-->
+                <form action=""> 
+                    <h2>CONTRATACIONES <span>atilayloscanibales@gmail.com</span></h2>
+                    <div class="main-contacto__lineText nombre">
+                        <label for="nombre"></label>
+                        <input type="text" name="nombre" placeholder="Ingrese su nombre">
+                    </div>
+                    <div class="main-contacto__lineText email">
+                        <label for="email"></label>
+                        <input type="email" name="email" placeholder="Ingrese su email">
+                    </div>
+                    <div class="main-contacto__sexo">
+                        <h3>Escoja su sexo:</h3>
+                        <label>
+                            Hombre
+                            <input type="radio" name="sexo">
+                        </label>
+                        <label>
+                            Mujer
+                            <input type="radio" name="sexo">
+                        </label>
+                        <label>
+                            Otro
+                            <input type="radio" name="sexo">
+                        </label>
+                    </div>
+                    <textarea class="main-contacto__areaText" name="texto"  cols="80" rows="10" placeholder="Déjanos tu mensaje!"></textarea>
+                    <div class="button">
+                        <input type="submit" value="Envía tu mensaje">
+                        <input type="reset" value="Limpia el formulario">
+                    </div>
+                </form> 
+            </section> <!--Fin section-->
+        </main> <!--Fin main-->
+
+        <footer class="footer"> <!--Comienzo footer-->
+            <h4>Copyright Albornoz Diego©</h4>
+            <div class="footer__redes">
+                <a href="https://www.youtube.com/channel/UCpOtcA5asNJcu6KfO-jrUVA" target="_blank">
+                    <img src="../assets/img/logo_youtube.jpg" alt="Youtube">
+                </a>
+                <a href="https://www.instagram.com/atilayloscanibales/" target="_blank">
+                    <img src="../assets/img/logo_instagram.jpg" alt="Instagram">
+                </a>
+            </div>
+        </footer> <!--Fin footer-->
+    </div> <!--Fin contenedor grid-->
 </body>
 </html>
