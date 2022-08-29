@@ -62,6 +62,9 @@ body{
 .grid-container .header .header__menu .activado{
     background-color: black;
     color: #f2ce00;
+    animation: bordeBoton .5s linear 0s 1;
+    border: 3px #f2ce00 solid;
+
 }
 
 /*----------------FIN HEADER----------------*/
@@ -133,6 +136,7 @@ body{
     height: 90vh;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    animation: imagenPrincipal .5s linear 0s 1;
 }
 
 /*----------------FIN INDEX----------------*/
@@ -166,6 +170,7 @@ body{
     background-color: black;
     border-radius: 45%;
     text-align: center;
+    animation: fondoRedondo 1s linear 0s 1;
 }
 
 .main-nosotros .main-nosotros__miembros span{
@@ -178,8 +183,10 @@ body{
 }
 
 .main-nosotros .main-nosotros__miembros img{
-    border: 4px white double;
+    animation: imgNosotros 1s linear 0s 1;
+    border: 4px white solid;
 }
+
 
 
 /*----------------FIN NOSOTROS----------------*/
@@ -240,6 +247,10 @@ body{
 .main-conciertos .main-conciertos__galeriaF .main-conciertos__fotos .foto img{
     width: 100%;
     height: 100%;
+}
+
+.main-conciertos .main-conciertos__galeriaF .main-conciertos__fotos .foto img:hover{
+    animation: fotosConcierto 100s step-start 0s 1;
 }
 
 .main-conciertos .main-conciertos__galeriaV{
@@ -318,6 +329,8 @@ body{
 .main-proxfechas .main-proxfechas__fechas a:hover{
     background-color: black;
     color: #f2ce00;
+    animation: bordeBoton .5s linear 0s 1;
+    border: #f2ce00 3px solid;
 }
 
 /*----------------FIN PROX-FECHAS----------------*/
@@ -361,6 +374,14 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 25px;
+}
+
+.main-contacto .main-contacto__formulario form .sombreado{
+    transition: all 1s;
+}
+
+.main-contacto .main-contacto__formulario form .sombreado:focus{
+    background-color: rgb(233, 233, 233);
 }
 
 .main-contacto .main-contacto__formulario form .main-contacto__lineText.nombre{
@@ -413,6 +434,8 @@ body{
 .main-contacto .main-contacto__formulario form .button input:hover{
     background-color: black;
     color: #f2ce00;
+    animation: bordeBoton .5s linear 0s 1;
+    border: #f2ce00 3px solid;
 }
 
 /*----------------FIN CONTACTO----------------*/
@@ -778,3 +801,106 @@ body{
     /*-------------------FIN CONTACTO-------------------*/
 }
 
+/*----------------COMIENZO KEYFRAMES----------------*/
+
+@keyframes imagenPrincipal {
+    0% {
+        transform: scale(0.3);
+    }
+    50% {
+        transform: scale(0.6);
+    }
+    100% {
+        transform: scale(1);
+    }
+    
+}
+
+@keyframes imgNosotros {
+    0% {
+        border: none;
+    }
+    10%{
+        border-top: 4px rgba(255, 255, 255, 0.767) double
+    }
+    25% {
+        border-top: 4px white double;
+    }
+    40%{
+        border-right: 4px rgba(255, 255, 255, 0.767) double
+    }
+    50% {
+        border-right: 4px white double;
+    }
+    60%{
+        border-bottom: 4px rgba(255, 255, 255, 0.767) double
+    }
+    75% {
+        border-bottom: 4px white double;
+    }
+    85%{
+        border-left: 4px rgba(255, 255, 255, 0.767) double
+    }
+    100% {
+        border-left: 4px white double;
+    }
+}
+
+@keyframes fondoRedondo {
+    0% {
+        background-color: rgba(0, 0, 0, 0);
+        transform: scale(0.7);
+    }
+
+    50% {
+        background-color: rgba(0, 0, 0, 0.514);
+        transform: scale(0.9);
+    }
+    
+    100% {
+        background-color: black;
+        transform: scale(1);
+    }
+}
+
+@keyframes fotosConcierto {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.1);
+    }
+}
+
+@keyframes bordeBoton {
+    0%{
+        border: none;
+    }
+    10%{
+        border-top:#f2ce00 1px groove;
+    }
+    25%{
+        border-top:#f2ce00 3px solid;
+    }
+    35%{
+        border-right:#f2ce00 1px groove;
+    }
+    50%{
+        border-right:#f2ce00 3px solid;
+    }
+    60%{
+        border-bottom:#f2ce00 1px groove;
+    }
+    75%{
+        border-bottom:#f2ce00 3px solid;
+    }
+    85%{
+        border-left:#f2ce00 1px groove;
+    }
+    100%{
+        border-left:#f2ce00 3px solid;
+    }
+}
+
+
+/*----------------FIN KEYFRAMES----------------*/

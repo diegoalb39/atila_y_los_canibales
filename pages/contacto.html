@@ -19,6 +19,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> <!--fontstyle contacto__sexo h3-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> <!--librería de animaciones-->
+
 </head>
 <body>
     <div class="grid-container"> <!--Comienzo contenedor grid-->
@@ -39,7 +42,7 @@
 
         <main class="main-contacto"> <!--Comienzo main-->
             <section class="tituloPrincipal">
-                <h1>CONTACTO</h1>
+                <h1 class="animate__animated animate__bounceInLeft">CONTACTO</h1>
             </section>
 
             <section class="main-contacto__formulario"> <!--Comienzo section-->
@@ -47,11 +50,11 @@
                     <h2>CONTRATACIONES <span>atilayloscanibales@gmail.com</span></h2>
                     <div class="main-contacto__lineText nombre">
                         <label for="nombre"></label>
-                        <input type="text" name="nombre" placeholder="Ingrese su nombre">
+                        <input class="sombreado" type="text" name="nombre" placeholder="Ingrese su nombre">
                     </div>
-                    <div class="main-contacto__lineText email">
+                    <div class="main-contacto__lineText email sombreado">
                         <label for="email"></label>
-                        <input type="email" name="email" placeholder="Ingrese su email">
+                        <input class="sombreado" type="email" name="email" placeholder="Ingrese su email">
                     </div>
                     <div class="main-contacto__sexo">
                         <h3>Escoja su sexo:</h3>
@@ -68,7 +71,7 @@
                             <input type="radio" name="sexo">
                         </label>
                     </div>
-                    <textarea class="main-contacto__areaText" name="texto"  cols="80" rows="10" placeholder="Déjanos tu mensaje!"></textarea>
+                    <textarea class="main-contacto__areaText sombreado" name="texto"  cols="80" rows="10" placeholder="Déjanos tu mensaje!"></textarea>
                     <div class="button">
                         <input type="submit" value="Envía tu mensaje">
                         <input type="reset" value="Limpia el formulario">
