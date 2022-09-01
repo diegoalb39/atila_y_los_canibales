@@ -22,75 +22,96 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> <!--librería de animaciones-->
 
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
 </head>
 <body>
-    <div class="grid-container"> <!--Comienzo contenedor grid-->
-        <header class="header"> <!--Comienzo header-->
-            <div class="header__logo">
-                <a href="../index.html">
-                    <img src="../assets/img/logo-atilayloscanibales.jpeg" alt="logo de Atila y Los Canibales">
-                </a>
-            </div>
-            <nav class="header__menu"> <!--Comienzo nav-->
-                <a href="../index.html">INICIO</a>
-                <a href="nosotros.html">NOSOTROS</a>
-                <a class="activado" href="#">CONCIERTOS</a>
-                <a href="prox_fechas.html">PROX FECHAS</a>
-                <a href="contacto.html">CONTACTO</a>
-            </nav> <!--Fin nav-->
-        </header> <!--Fin header-->
+  <div class="grid-container"> <!--Comienzo contenedor grid-->
+    <header> <!--Comienzo header-->
+      <nav class="navbar navbar-expand-lg bg-black"> <!--Comienzo nav-->
+        <div class="container-md container-fluid">
+          <a class="navbar-brand ms-5" href="#">
+            <img src="../assets/img/logo-atilayloscanibales.jpeg" alt="logo de Atila y Los Canibales">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link me-3 px-4 py-4 fw-bolder style-atila" href="../index.html">INICIO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link me-3 px-4 py-4 fw-bolder style-atila" href="../pages/nosotros.html">NOSOTROS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link activado me-3 px-4 py-4 fw-bolder style-atila" aria-current="page" href="#">CONCIERTOS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link me-3 px-4 py-4 fw-bolder style-atila" href="../pages/prox_fechas.html">PROX FECHAS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link me-3 px-4 py-4 fw-bolder style-atila" href="../pages/contacto.html">CONTACTO</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav> <!--Fin nav-->
+    </header> <!--Fin header-->
 
-        <main class="main-conciertos"> <!--Comienzo main-->
+    <main class="main-conciertos"> <!--Comienzo main-->
+      
+      <h1 class="tituloPrincipal animate__animated animate__bounceInLeft">CONCIERTOS</h1>
+          
+      <section class="main-conciertos__galeriaF"> <!--Comienzo GALERIA FOTOS-->
+        <h2 class="subtitulo">FOTOS</h2>
+        <div class="main-conciertos__fotos">
+          <div class="foto "><img src="../assets/img/concierto6.jpeg" alt="recital"></div> 
+          <div class="foto wide no-small"><img src="../assets/img/concierto5.jpg" alt="recital"></div>
+          <div class="foto tall"><img src="../assets/img/concierto1.jpeg" alt="show"></div>
+          <div class="foto"><img src="../assets/img/concierto4.jpg" alt="concierto"></div>
+          <div class="foto tall"><img src="../assets/img/concierto9.jpeg" alt="recital"></div> 
+          <div class="foto"><img src="../assets/img/concierto11.jpeg" alt="show"></div>
+          <div class="foto giant"><img src="../assets/img/concierto14.jpg" alt="banda"> </div>
+          <div class="foto"><img src="../assets/img/concierto7.jpeg" alt="concierto"></div>
+          <div class="foto"><img src="../assets/img/concierto12.jpeg" alt="concierto"></div>
+          <div class="foto "><img src="../assets/img/concierto10.jpeg" alt="banda"></div>
+          <div class="foto wide no-small"><img src="../assets/img/concierto15.jpg" alt="banda"> </div>
+          <div class="foto wide no-small"><img src="../assets/img/concierto2.jpg" alt="guitarrista"></div>
+          <div class="foto"><img src="../assets/img/concierto16.jpeg" alt="guitarrista"></div>
+          <div class="foto"><img src="../assets/img/concierto3.jpeg" alt="show"></div>
+          <div class="foto wide"><img src="../assets/img/concierto8.jpg" alt="recital"></div>
+        </div>
+      </section> <!--Fin GALERIA FOTOS-->
 
-            <section class="tituloPrincipal">
-                <h1 class="animate__animated animate__bounceInLeft">CONCIERTOS</h1>
-            </section>
-                
-            <section class="main-conciertos__galeriaF"> <!--Comienzo GALERIA FOTOS-->
-                <h2 class="subtitulo">FOTOS</h2>
-                <div class="main-conciertos__fotos">
-                    <div class="foto "><img src="../assets/img/concierto6.jpeg" alt="recital"></div> 
-                    <div class="foto wide no-small"><img src="../assets/img/concierto5.jpg" alt="recital"></div>
-                    <div class="foto tall"><img src="../assets/img/concierto1.jpeg" alt="show"></div>
-                    <div class="foto"><img src="../assets/img/concierto4.jpg" alt="concierto"></div>
-                    <div class="foto tall"><img src="../assets/img/concierto9.jpeg" alt="recital"></div> 
-                    <div class="foto"><img src="../assets/img/concierto11.jpeg" alt="show"></div>
-                    <div class="foto giant"><img src="../assets/img/concierto14.jpg" alt="banda"> </div>
-                    <div class="foto"><img src="../assets/img/concierto7.jpeg" alt="concierto"></div>
-                    <div class="foto"><img src="../assets/img/concierto12.jpeg" alt="concierto"></div>
-                    <div class="foto "><img src="../assets/img/concierto10.jpeg" alt="banda"></div>
-                    <div class="foto wide no-small"><img src="../assets/img/concierto15.jpg" alt="banda"> </div>
-                    <div class="foto wide no-small"><img src="../assets/img/concierto2.jpg" alt="guitarrista"></div>
-                    <div class="foto"><img src="../assets/img/concierto16.jpeg" alt="guitarrista"></div>
-                    <div class="foto"><img src="../assets/img/concierto3.jpeg" alt="show"></div>
-                    <div class="foto wide"><img src="../assets/img/concierto8.jpg" alt="recital"></div>
-                </div>
-            </section> <!--Fin GALERIA FOTOS-->
+      <section class="main-conciertos__galeriaV"> <!--Comienzo GALERIA VIDEOS-->
+        <h2 class="subtitulo">VIDEOS</h2>
+        <div class="main-conciertos__videos">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/_822p_kmPnY" title="Fusilados por la cruz roja - Atila y los Canibales" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/jHC9Pv8JHQk" title="Canción para naufragios - Atila y los Canibales" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/lJbmVYF5ISw" title="El pibe de los astilleros - Atila y los Canibales" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>   
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/SEX3A7gR3Fo" title="Todo un palo - Atila y los Canibales" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/hlldzb35fcE" title="Toxi taxi - Atila y los Canibales" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>           
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/dnmQadgRLrs" title="Rock para los dientes - Atila y los Canibales" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </section> <!--Fin GALERIA VIDEOS-->
+    </main> <!--Fin main-->
 
-            <section class="main-conciertos__galeriaV"> <!--Comienzo GALERIA VIDEOS-->
-                <h2 class="subtitulo">VIDEOS</h2>
-                <div class="main-conciertos__videos">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/_822p_kmPnY" title="Fusilados por la cruz roja - Atila y los Canibales" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/jHC9Pv8JHQk" title="Canción para naufragios - Atila y los Canibales" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/lJbmVYF5ISw" title="El pibe de los astilleros - Atila y los Canibales" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>   
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/SEX3A7gR3Fo" title="Todo un palo - Atila y los Canibales" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/hlldzb35fcE" title="Toxi taxi - Atila y los Canibales" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>           
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dnmQadgRLrs" title="Rock para los dientes - Atila y los Canibales" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </section> <!--Fin GALERIA VIDEOS-->
-        </main> <!--Fin main-->
+    <footer class="footer"> <!--Comienzo footer-->
+      <h4>Copyright Albornoz Diego©</h4>
+      <div class="footer__redes">
+        <a href="https://www.youtube.com/channel/UCpOtcA5asNJcu6KfO-jrUVA" target="_blank">
+          <img src="../assets/img/logo_youtube.jpg" alt="Youtube">
+        </a>
+        <a href="https://www.instagram.com/atilayloscanibales/" target="_blank">
+          <img src="../assets/img/logo_instagram.jpg" alt="Instagram">
+        </a>
+      </div>
+    </footer> <!--Fin footer-->
+  </div> <!--Fin contenedor grid-->
 
-        <footer class="footer"> <!--Comienzo footer-->
-            <h4>Copyright Albornoz Diego©</h4>
-            <div class="footer__redes">
-                <a href="https://www.youtube.com/channel/UCpOtcA5asNJcu6KfO-jrUVA" target="_blank">
-                    <img src="../assets/img/logo_youtube.jpg" alt="Youtube">
-                </a>
-                <a href="https://www.instagram.com/atilayloscanibales/" target="_blank">
-                    <img src="../assets/img/logo_instagram.jpg" alt="Instagram">
-                </a>
-            </div>
-        </footer> <!--Fin footer-->
-    </div> <!--Fin contenedor grid-->
+        <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 </html>
