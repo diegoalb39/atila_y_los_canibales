@@ -22,7 +22,6 @@ body{
     color: white;
 }
 
-
 /*----------------COMIENZO HEADER----------------*/
 .grid-container header{
     grid-area: header;
@@ -52,7 +51,6 @@ body{
 
 /*----------------FIN HEADER----------------*/
 
-
 /*----------------COMIENZO FOOTER----------------*/
 
 .grid-container .footer{
@@ -81,7 +79,6 @@ body{
 }
 
 /*----------------FIN FOOTER----------------*/
-
 
 /*----------------COMIENZO INDEX----------------*/
 
@@ -119,6 +116,52 @@ body{
 
 /*----------------FIN INDEX----------------*/
 
+/*----------------COMIENZO NOSOTROS----------------*/
+
+.main-nosotros{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-nosotros .main-nosotros__miembros{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.main-nosotros .main-nosotros__miembros h2{
+    font-family: 'Oregano', cursive;
+    font-size: 60px;
+    letter-spacing: 3px;
+    color: white;
+    font-weight: 900;
+    padding: 70px 0px;
+    background-color: black;
+    border-radius: 45%;
+    text-align: center;
+    animation: fondoRedondo 1s linear 0s 1;
+}
+
+.main-nosotros .main-nosotros__miembros span{
+    font-style: italic;
+    font-weight: 200;
+}
+
+.main-nosotros .main-nosotros__miembros.reverse{
+    flex-direction: row-reverse;
+}
+
+.main-nosotros .main-nosotros__miembros img{
+    animation: imgNosotros 1s linear 0s 1;
+    border: 4px white solid;
+}
+
+/*----------------FIN NOSOTROS----------------*/
 
 /*----------------COMIENZO CONCIERTOS----------------*/
 
@@ -186,7 +229,12 @@ body{
     margin-bottom: 50px;
 }
 
-
+.main-conciertos .main-conciertos__galeriaV .main-conciertos__videos{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto auto;
+    row-gap: 50px;
+}
 
 .main-conciertos .main-conciertos__galeriaV .main-conciertos__videos iframe{
     justify-self: center;
@@ -195,7 +243,6 @@ body{
 }
 
 /*----------------FIN CONCIERTOS----------------*/
-
 
 /*----------------COMIENZO PROX-FECHAS----------------*/
 
@@ -234,8 +281,29 @@ body{
     padding: 0px 50px;
 }
 
-/*----------------FIN PROX-FECHAS----------------*/
+.main-proxfechas .main-proxfechas__fechas a{
+    grid-area: boton;
+    background-color: #FFD900;
+    color: black;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 3px;
+    text-align: center;
+    align-self: start;
+    justify-self: left;
+    margin-left: 50px;
+    margin-top: 10px;
+    padding: 10px 10px;
+    width: auto;
+}
 
+.main-proxfechas .main-proxfechas__fechas a:hover{
+    background-color: black;
+    color: #f2ce00;
+    animation: bordeBoton .5s linear 0s 1;
+    border: #f2ce00 3px solid;
+}
+
+/*----------------FIN PROX-FECHAS----------------*/
 
 /*----------------COMIENZO CONTACTO----------------*/
 
@@ -319,7 +387,6 @@ body{
 
 
 
-
 /* ----------------MEDIA QUERIES---------------- */
 
 @media (min-width:320px) and (max-width:767px){
@@ -337,7 +404,6 @@ body{
 
     /*-------------------FIN FOOTER-------------------*/
 
-
     /*-------------------COMIENZO INDEX-------------------*/
 
     .main-index .main-index__info{
@@ -353,15 +419,32 @@ body{
 
     /*-------------------FIN INDEX-------------------*/
 
-
     /*-------------------COMIENZO NOSOTROS-------------------*/
 
     .grid-container main .tituloPrincipal{
         font-size: 43px;
     }
 
-    /*-------------------FIN NOSOTROS-------------------*/
+    .grid-container .main-nosotros .main-nosotros__miembros{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 45px;
+    }
 
+    .main-nosotros .main-nosotros__miembros h2{
+        font-size: 30px;
+        padding: 20px 0px;
+        border-radius: 35%;
+        margin-bottom: 5px;
+    }
+
+    .main-nosotros .main-nosotros__miembros img{
+        width: 50%;
+        height: auto;
+    }
+
+    /*-------------------FIN NOSOTROS-------------------*/
 
     /*-------------------COMIENZO CONCIERTOS-------------------*/
 
@@ -374,7 +457,10 @@ body{
         margin-left: 10px;
     }
 
-    
+    .main-conciertos .main-conciertos__galeriaV .main-conciertos__videos{
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(6,auto);
+    }
 
     .main-conciertos .main-conciertos__galeriaV .main-conciertos__videos iframe{
         width: 95%;
@@ -382,7 +468,6 @@ body{
     }
     
     /*-------------------FIN CONCIERTOS-------------------*/
-
 
     /*-------------------COMIENZO PROX-FECHAS-------------------*/
 
@@ -418,10 +503,12 @@ body{
         padding: 5px 0px;
     }
 
-    
+    .main-proxfechas .main-proxfechas__fechas a{
+        margin: 0;
+        width: auto;
+    }
 
     /*-------------------FIN PROX-FECHAS-------------------*/
-
 
     /*-------------------COMIENZO CONTACTO-------------------*/
 
@@ -464,7 +551,6 @@ body{
 }
 
 
-
 /*-------------- COMIENZO GALERIA DE CONCIERTOS-------------- */
 @media (min-width:700px){
     .main-conciertos .main-conciertos__galeriaF .main-conciertos__fotos .tall{
@@ -485,7 +571,6 @@ body{
     }
 }
 /*-------------- FIN GALERIA DE CONCIERTOS-------------- */
-
 
 
 @media (min-width:768px) and (max-width:1024px){
@@ -517,7 +602,6 @@ body{
 
     /*-------------------FIN CONCIERTOS-------------------*/
 
-
     /*-------------------COMIENZO CONTACTO-------------------*/
 
     .grid-container main .main-contacto__formulario form h2{
@@ -546,6 +630,36 @@ body{
         transform: scale(1);
     }
     
+}
+
+@keyframes imgNosotros {
+    0% {
+        border: none;
+    }
+    10%{
+        border-top: 4px rgba(255, 255, 255, 0.767) double
+    }
+    25% {
+        border-top: 4px white double;
+    }
+    40%{
+        border-right: 4px rgba(255, 255, 255, 0.767) double
+    }
+    50% {
+        border-right: 4px white double;
+    }
+    60%{
+        border-bottom: 4px rgba(255, 255, 255, 0.767) double
+    }
+    75% {
+        border-bottom: 4px white double;
+    }
+    85%{
+        border-left: 4px rgba(255, 255, 255, 0.767) double
+    }
+    100% {
+        border-left: 4px white double;
+    }
 }
 
 @keyframes fondoRedondo {
@@ -603,6 +717,5 @@ body{
         border-left:#f2ce00 3px solid;
     }
 }
-
 
 /*----------------FIN KEYFRAMES----------------*/
