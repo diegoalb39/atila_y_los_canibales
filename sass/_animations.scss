@@ -1,0 +1,46 @@
+/*----------------COMIENZO KEYFRAMES----------------*/
+
+@keyframes imagenPrincipal {
+    0% {
+        transform: scale(0.3);
+    }
+    50% {
+        transform: scale(0.6);
+    }
+    100% {
+        transform: scale(1);
+    }
+    
+}
+
+@keyframes bordeBoton {
+    0%{
+        border: none;
+    }
+    10%{
+        border-top:#f2ce00 1px groove;
+    }
+    25%{
+        border-top:#f2ce00 3px solid;
+    }
+    35%{
+        border-right:#f2ce00 1px groove;
+    }
+    50%{
+        border-right:#f2ce00 3px solid;
+    }
+    60%{
+        border-bottom:#f2ce00 1px groove;
+    }
+    75%{
+        border-bottom:#f2ce00 3px solid;
+    }
+    85%{
+        border-left:#f2ce00 1px groove;
+    }
+    100%{
+        border-left:#f2ce00 3px solid;
+    }
+}
+
+/*----------------FIN KEYFRAMES----------------*/

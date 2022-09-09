@@ -1,0 +1,56 @@
+/* ----------------MEDIA QUERIES---------------- */
+
+@media (min-width:320px) and (max-width:767px){
+
+    /*-------------------COMIENZO FOOTER-------------------*/
+
+    .grid-container{
+        .footer{
+            &__redes{
+                margin: 0;
+                width: 25%;
+            }
+        }
+    } 
+
+    /*-------------------FIN FOOTER-------------------*/
+
+    /*-------------------COMIENZO INDEX-------------------*/
+
+    .main-index{
+        & &__info{
+            flex-direction: column;
+            margin: 15px;
+            & .main-index__biografia{
+                width: auto;
+                padding: 0;
+            }
+        }
+    }
+}
+
+    /*-------------------FIN INDEX-------------------*/
+
+@media (min-width:768px) and (max-width:1024px){
+
+    /*-------------------COMIENZO INDEX-------------------*/
+
+    .grid-container{
+        main{
+            .imagenPrincipal{
+                height: 40vh;
+            }
+        }
+    }
+    .main-index{
+        & &__info{
+            flex-direction: column;
+            margin: 15px;
+            & .main-index__biografia{
+                width: auto;
+                padding: 0;
+            }
+        }
+    }
+
+}

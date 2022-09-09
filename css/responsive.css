@@ -59,7 +59,6 @@ body{
     justify-content: space-around;
     align-items: center;
     background-color: black;
-    font-size: 20px;
     height: auto;
     padding: 20px 0px;
     grid-area: footer;
@@ -134,6 +133,7 @@ body{
     margin-bottom: 30px;
 }
 
+
 .main-nosotros .main-nosotros__miembros h2{
     font-family: 'Oregano', cursive;
     font-size: 60px;
@@ -146,6 +146,7 @@ body{
     text-align: center;
     animation: fondoRedondo 1s linear 0s 1;
 }
+
 
 .main-nosotros .main-nosotros__miembros span{
     font-style: italic;
@@ -205,10 +206,12 @@ body{
     gap: 20px;
     padding: 20px;
     grid-auto-flow: dense;
+    
 }
 
 .main-conciertos .main-conciertos__galeriaF .main-conciertos__fotos .foto{
     border: white 2px solid;
+    transition: 0.5s;
 }
 
 .main-conciertos .main-conciertos__galeriaF .main-conciertos__fotos .no-small{
@@ -220,8 +223,8 @@ body{
     height: 100%;
 }
 
-.main-conciertos .main-conciertos__galeriaF .main-conciertos__fotos .foto img:hover{
-    animation: fotosConcierto 100s step-start 0s 1;
+.main-conciertos .main-conciertos__galeriaF .main-conciertos__fotos .foto:hover{
+    transform: scale(1.04);
 }
 
 .main-conciertos .main-conciertos__galeriaV{
@@ -253,6 +256,7 @@ body{
     "flyer      parrafo"
     "flyer      parrafo"
     "flyer      boton";
+    grid-template-rows: auto auto auto auto;
     margin-bottom: 50px;
     margin-left: 20px;
 }
@@ -270,18 +274,35 @@ body{
     width: 27vw;
 }
 
-.main-proxfechas .main-proxfechas__fechas p{
-    grid-area: parrafo;
-    text-align: justify;
-    font-style: italic;
-    font-family: 'Bebas Neue', cursive;
-    line-height: 30px;
-    font-size: 20px;
-    align-self: center;
-    padding: 0px 50px;
+.main-proxfechas .main-proxfechas__fechas .informacion{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.main-proxfechas .main-proxfechas__fechas a{
+.main-proxfechas .main-proxfechas__fechas .informacion{
+    grid-area: parrafo;
+    text-align: left;
+    font-style: italic;
+    font-family: 'Permanent Marker', cursive;
+    line-height: 40px;
+    font-size: 35px;
+    padding: 0px 20px; 
+    letter-spacing: 3px;
+    
+}
+
+.main-proxfechas .main-proxfechas__fechas .informacion .btn_ubicacion{
+    display: none;
+}
+
+.main-proxfechas .main-proxfechas__fechas .informacion iframe{
+    height: 50vh;
+    margin-right: 10px;
+}
+
+.main-proxfechas .main-proxfechas__fechas .btn_entrada{
     grid-area: boton;
     background-color: #FFD900;
     color: black;
@@ -290,17 +311,44 @@ body{
     text-align: center;
     align-self: start;
     justify-self: left;
-    margin-left: 50px;
     margin-top: 10px;
+    margin-left: 30px;
     padding: 10px 10px;
     width: auto;
+    height: auto;
+    text-decoration: none;
 }
 
-.main-proxfechas .main-proxfechas__fechas a:hover{
+.main-proxfechas .main-proxfechas__fechas .btn_entrada p{
+    margin: 0;
+    padding: 0px 20px;
+    display: inline;
+}
+
+.main-proxfechas .main-proxfechas__fechas .btn_entrada img{
+    height: 100%;
+    width: auto;
+    transform: rotate(15deg);  
+}
+
+.main-proxfechas .main-proxfechas__fechas .btn_entrada .icon_a_hover{
+    display: none;
+}
+
+.main-proxfechas .main-proxfechas__fechas .btn_entrada:hover{
     background-color: black;
     color: #f2ce00;
     animation: bordeBoton .5s linear 0s 1;
     border: #f2ce00 3px solid;
+}
+
+.main-proxfechas .main-proxfechas__fechas .btn_entrada:hover .icon_a_hover{
+    display: inline-block;
+    background-color: #f2ce00;
+}
+
+.main-proxfechas .main-proxfechas__fechas .btn_entrada:hover .icon_a{
+    display: none;
 }
 
 /*----------------FIN PROX-FECHAS----------------*/
@@ -393,10 +441,6 @@ body{
 
     /*-------------------COMIENZO FOOTER-------------------*/
 
-    .grid-container .footer h4{
-        font-size: 16px;
-    }
-
     .grid-container .footer .footer__redes{
         margin: 0;
         width: 25%;
@@ -484,7 +528,7 @@ body{
         "flyer      flyer"
         "flyer      flyer"
         "parrafo    parrafo"
-        ".          boton";
+        "boton          boton";
         margin-right: 20px;
     }
 
@@ -498,14 +542,21 @@ body{
         justify-self: center;
     }
 
-    .main-proxfechas .main-proxfechas__fechas p{
+    .main-proxfechas .main-proxfechas__fechas .informacion div p{
         width: 100%;
         padding: 5px 0px;
     }
 
-    .main-proxfechas .main-proxfechas__fechas a{
+    
+
+    .main-proxfechas .main-proxfechas__fechas .informacion iframe{
+        display: none;
+    }
+
+    .main-proxfechas .main-proxfechas__fechas .btn_entrada{
         margin: 0;
-        width: auto;
+        width: 100%;
+        
     }
 
     /*-------------------FIN PROX-FECHAS-------------------*/
@@ -676,15 +727,6 @@ body{
     100% {
         background-color: black;
         transform: scale(1);
-    }
-}
-
-@keyframes fotosConcierto {
-    0%{
-        transform: scale(1);
-    }
-    100%{
-        transform: scale(1.1);
     }
 }
 

@@ -1,0 +1,15 @@
+body{
+    background-image: url(../assets/img/fondo-main.jpg);
+    .grid-container{
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        height: 100vh;
+        color: white;
+    }
+}
+

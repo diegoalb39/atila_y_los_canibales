@@ -1,0 +1,33 @@
+/*----------------COMIENZO HEADER----------------*/
+
+.grid-container{
+    header{
+        grid-area: header;
+    }
+    nav{
+        button{
+            background-color: $colorMain;
+        }
+    }
+    
+    .activado{
+        background-color: black;
+        color: $colorSec;
+        animation: bordeBoton .5s linear 0s 1;
+        border: 3px $colorSec solid;
+    }
+}
+
+.style-atila{
+    background-color: $colorMain;
+    font-family: 'RocknRoll One', sans-serif;
+    border: 1px black solid;
+    &:hover{
+        background-color: black;
+        animation: bordeBoton .5s linear 0s 1;
+        color: $colorSec ;
+        border: 3px #f2ce00 solid
+    }
+}
+
+/*----------------FIN HEADER----------------*/
