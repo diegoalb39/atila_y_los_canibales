@@ -8,7 +8,8 @@
 body {
   background-image: url(../assets/img/fondo-main.jpg);
 }
-body .grid-container {
+
+.grid-container {
   display: grid;
   grid-template-areas: "header" "main" "footer";
   grid-template-columns: 100%;
@@ -112,6 +113,16 @@ body .grid-container {
 /*----------------FIN INDEX----------------*/
 /* ----------------MEDIA QUERIES---------------- */
 @media (min-width: 320px) and (max-width: 767px) {
+  .grid-container main .imagenPrincipal {
+    margin: 0;
+    height: 35vh;
+    background-size: cover;
+    background-position: 40% 50%;
+  }
+  .grid-container main .subtitulo {
+    font-size: 50px;
+    margin-left: 10px;
+  }
   /*-------------------COMIENZO FOOTER-------------------*/
   .grid-container .footer__redes {
     margin: 0;
