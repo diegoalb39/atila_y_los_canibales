@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
+    text-decoration: none !important;
 }  /* RESET */
 
 body{
@@ -39,7 +39,9 @@ body{
 
 .style-atila:hover{
     background-color: black;
-    color: #f2ce00 !important;
+    animation: bordeBoton .5s linear 0s 1;
+    color: #f2ce00;
+    border: 3px #f2ce00 solid;
 }
 
 .grid-container .activado{
@@ -67,13 +69,9 @@ body{
 .grid-container .footer .footer__redes{
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     margin-left: 100px;
-    width: 15%;
-    height: auto;
-}
-
-.grid-container .footer .footer__redes img{
-    width: 50%;
+    width: 20%;
     height: auto;
 }
 
@@ -252,11 +250,12 @@ body{
 .main-proxfechas .main-proxfechas__fechas{
     display: grid;
     grid-template-areas: 
-    "subtitulo  subtitulo"
-    "flyer      parrafo"
-    "flyer      parrafo"
-    "flyer      boton";
+    "subtitulo  subtitulo   subtitulo"
+    "flyer      parrafo     ubicacion"
+    "flyer      parrafo     ubicacion"
+    "flyer      boton       ubicacion";
     grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto auto 1fr;
     margin-bottom: 50px;
     margin-left: 20px;
 }
@@ -272,34 +271,56 @@ body{
 .main-proxfechas .main-proxfechas__fechas img{
     grid-area: flyer;
     width: 27vw;
-}
-
-.main-proxfechas .main-proxfechas__fechas .informacion{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    height: auto;
 }
 
 .main-proxfechas .main-proxfechas__fechas .informacion{
     grid-area: parrafo;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     text-align: left;
     font-style: italic;
     font-family: 'Permanent Marker', cursive;
     line-height: 40px;
-    font-size: 35px;
-    padding: 0px 20px; 
-    letter-spacing: 3px;
-    
+    font-size: 30px; 
+    letter-spacing: 3px; 
+    padding: 0px 10px;
 }
 
-.main-proxfechas .main-proxfechas__fechas .informacion .btn_ubicacion{
+.main-proxfechas .main-proxfechas__fechas .informacion span{
+    display: block;
+}
+
+.main-proxfechas .main-proxfechas__fechas .informacion div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-proxfechas .main-proxfechas__fechas .informacion div img{
+    width: auto;
+    height: 100%;
+}
+
+.main-proxfechas .main-proxfechas__fechas .informacion div p{
+    margin: 0px;
+}
+
+.main-proxfechas .main-proxfechas__fechas .ubicacion{
+    grid-area: ubicacion;
+    padding-right: 20px;
+}
+
+.main-proxfechas .main-proxfechas__fechas .ubicacion .btn_ubicacion{
     display: none;
 }
 
-.main-proxfechas .main-proxfechas__fechas .informacion iframe{
-    height: 50vh;
-    margin-right: 10px;
+.main-proxfechas .main-proxfechas__fechas .ubicacion iframe{
+    width: 100%;
+    height: 100%;
 }
 
 .main-proxfechas .main-proxfechas__fechas .btn_entrada{
@@ -316,7 +337,6 @@ body{
     padding: 10px 10px;
     width: auto;
     height: auto;
-    text-decoration: none;
 }
 
 .main-proxfechas .main-proxfechas__fechas .btn_entrada p{
@@ -441,9 +461,17 @@ body{
 
     /*-------------------COMIENZO FOOTER-------------------*/
 
+    .grid-container .footer h4{
+        padding-left: 10px;
+    }
+
     .grid-container .footer .footer__redes{
         margin: 0;
-        width: 25%;
+    }
+
+    .grid-container .footer .footer__redes img{
+        width: 90%;
+        height: auto;
     }
 
     /*-------------------FIN FOOTER-------------------*/
@@ -524,17 +552,19 @@ body{
 
     .main-proxfechas .main-proxfechas__fechas{
         grid-template-areas: 
-        "subtitulo  subtitulo"
-        "flyer      flyer"
-        "flyer      flyer"
-        "parrafo    parrafo"
-        "boton          boton";
+        "subtitulo"
+        "flyer"
+        "flyer"
+        "parrafo"
+        "ubicacion"
+        "boton";
         margin-right: 20px;
     }
 
     .main-proxfechas .main-proxfechas__fechas h3{
         font-size: 30px;
         width: 100%;
+        text-align: center;
     }
 
     .main-proxfechas .main-proxfechas__fechas img{
@@ -542,21 +572,55 @@ body{
         justify-self: center;
     }
 
-    .main-proxfechas .main-proxfechas__fechas .informacion div p{
-        width: 100%;
-        padding: 5px 0px;
+    .main-proxfechas .main-proxfechas__fechas .informacion{
+        justify-content: center;
+        align-items: center;
     }
 
-    
+    .main-proxfechas .main-proxfechas__fechas .informacion p{
+        font-size: 25px;
+        padding-top: 5px;
+        text-align: center;
+    }
 
-    .main-proxfechas .main-proxfechas__fechas .informacion iframe{
+    .main-proxfechas .main-proxfechas__fechas .informacion span{
+        display: inline;
+    }
+
+    .main-proxfechas .main-proxfechas__fechas .ubicacion{
+        padding: 0px;   
+        width: 100%;
+        max-width: 321px;
+        margin: 0 auto;
+    }
+
+    .main-proxfechas .main-proxfechas__fechas .ubicacion .btn_ubicacion{
+        display: block;
+        font-family: 'Permanent Marker', cursive;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 25px;
+        color: #f2ce00;
+    }
+
+    .main-proxfechas .main-proxfechas__fechas .ubicacion .btn_ubicacion img{
+        height: 100%;
+        width: auto;
+        margin-bottom: 16px;
+    }
+
+    .main-proxfechas .main-proxfechas__fechas .ubicacion iframe{
         display: none;
     }
 
     .main-proxfechas .main-proxfechas__fechas .btn_entrada{
         margin: 0;
         width: 100%;
-        
+        width: 100%;
+        max-width: 321px;
+        margin: 0 auto;
     }
 
     /*-------------------FIN PROX-FECHAS-------------------*/
@@ -652,6 +716,45 @@ body{
     }
 
     /*-------------------FIN CONCIERTOS-------------------*/
+
+
+    /*-------------------COMIENZO PROX-FECHAS-------------------*/
+
+    .main-proxfechas .main-proxfechas__fechas{
+        grid-template-areas: 
+        "subtitulo  subtitulo"
+        "flyer      ubicacion"
+        "flyer      ubicacion"
+        "parrafo    boton";
+        grid-template-columns: 1fr 1fr;
+        
+    }
+
+    .main-proxfechas .main-proxfechas__fechas img{
+        width: 80%;
+        height: auto;
+    }
+
+    
+
+    .main-proxfechas .main-proxfechas__fechas .informacion p{
+        font-size: 25px;
+        margin: 0px;
+    }
+
+    .main-proxfechas .main-proxfechas__fechas .informacion span{
+        display: inline;
+    }
+
+    .main-proxfechas .main-proxfechas__fechas .btn_entrada{
+        align-self: center;
+        
+    }
+
+
+
+    /*-------------------FIN PROX-FECHAS-------------------*/
+
 
     /*-------------------COMIENZO CONTACTO-------------------*/
 
