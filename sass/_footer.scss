@@ -5,20 +5,17 @@
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-        background-color: black;
+        background-color: map-get($palette, dark);
         height: auto;
         padding: 20px 0px;
         grid-area: footer;
         &__redes{
             display: flex;
             flex-direction: row;
+            justify-content: space-around;
             margin-left: 100px;
-            width: 15%;
+            width: 20%;
             height: auto;
-            img{
-                width: 50%;
-                height: auto;
-            }
         }
     }
 }

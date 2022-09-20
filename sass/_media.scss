@@ -2,28 +2,25 @@
 
 @media (min-width:320px) and (max-width:767px){
 
-    .grid-container{
-        main{
-            .imagenPrincipal{
-                margin: 0;
-                height: 35vh;
-                background-size: cover;
-                background-position: 40% 50%;
-            }
-            .subtitulo{
-                font-size: 50px;
-                margin-left: 10px;
-            }
-        }
-    }
+.imagenPrincipal{ 
+    height: 35vh;
+    background-size: cover;
+    background-position: 40% 50%;
+}
 
     /*-------------------COMIENZO FOOTER-------------------*/
 
     .grid-container{
         .footer{
+            h4{
+                padding-left: 10px;
+            }
             &__redes{
                 margin: 0;
-                width: 25%;
+                img{
+                    width: 90%;
+                    height: auto;
+                }
             }
         }
     } 
@@ -34,17 +31,107 @@
 
     .main-index{
         & &__info{
-            flex-direction: column;
-            margin: 15px;
+            .tituloPrincipal{
+                @include mainTitle;
+                font-size: 50px;
+            }
+            grid-template-areas:
+            "titulo"
+            "biografia"
+            "musica";
+            grid-template-columns: 100%;
+            grid-template-rows: auto auto auto;
             & .main-index__biografia{
                 width: auto;
                 padding: 0;
             }
+            & .main-index__musica{
+                .subtitulo{
+                    @include subtitle;
+                    font-size: 50px;
+                    margin-left: 10px;
+                }
+            }
         }
     }
-}
-
     /*-------------------FIN INDEX-------------------*/
+
+    /*-------------------COMIENZO PROX-FECHAS-------------------*/
+
+    .main-proxfechas{
+        .tituloPrincipal{
+            @include mainTitle;
+            font-size: 60px;
+        }
+        & &__fechas{
+            grid-template-areas: 
+            "subtitulo"
+            "flyer"
+            "flyer"
+            "parrafo"
+            "ubicacion"
+            "boton";
+            margin-right: 20px;
+            & h3{
+                font-size: 30px;
+                width: 100%;
+                text-align: center;
+            }
+            & img{
+                width: 76vw;
+                justify-self: center;
+            }
+            & .informacion{
+                justify-content: center;
+                align-items: center;
+                & p{
+                    font-size: 25px;
+                    padding-top: 5px;
+                    text-align: center;
+                }
+                & span{
+                    display: inline;
+                }
+            }
+            & .ubicacion{
+                padding: 0px;   
+                width: 100%;
+                max-width: 321px;
+                margin: 0 auto;
+                & .btn_ubicacion{
+                    display: block;
+                    font-family: 'Permanent Marker', cursive;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+                    font-size: 25px;
+                    text-decoration: none;
+                    color: map-get($palette, secundary);
+                    & img{
+                        height: 100%;
+                        width: auto;
+                        margin-bottom: 16px;
+                    }
+                }
+                & iframe{
+                    display: none;
+                }
+            }
+            & .btn_entrada{
+                margin: 0;
+                width: 100%;
+                width: 100%;
+                max-width: 321px;
+                margin: 0 auto;
+            }
+
+        }
+    }
+
+    /*-------------------FIN PROX-FECHAS-------------------*/
+}
+ 
 
 @media (min-width:768px) and (max-width:1024px){
 
@@ -67,5 +154,38 @@
             }
         }
     }
+
+    /*-------------------FIN INDEX-------------------*/
+
+    /*-------------------COMIENZO PROX-FECHAS-------------------*/
+
+    .main-proxfechas{
+        & &__fechas{
+            grid-template-areas: 
+            "subtitulo  subtitulo"
+            "flyer      ubicacion"
+            "flyer      ubicacion"
+            "parrafo    boton";
+            grid-template-columns: 1fr 1fr;
+            & img{
+                width: 80%;
+                height: auto;
+            }
+            & .informacion{
+                & p{
+                    font-size: 25px;
+                    margin: 0px;
+                }
+                & span{
+                    display: inline;
+                }
+            } 
+            & .btn_entrada{
+                align-self: center;
+            }
+        }
+    }
+
+    /*-------------------FIN PROXFECHAS-------------------*/
 
 }

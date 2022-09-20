@@ -1,0 +1,439 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background-image: url(../assets/img/fondo-main.jpg);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  height: 100vh;
+  color: white;
+}
+
+.imagenPrincipal {
+  width: 100%;
+  height: 90vh;
+  background-image: no-repeat;
+  background-size: 100% 100%;
+  animation: imagenPrincipal 0.5s linear 0s 1;
+}
+
+/*----------------COMIENZO HEADER----------------*/
+.grid-container header {
+  grid-area: header;
+}
+.grid-container nav button {
+  background-color: #FFD900;
+}
+.grid-container .activado {
+  background-color: black;
+  color: #E6AF0B;
+  animation: bordeBoton 0.5s linear 0s 1;
+  border: 3px #E6AF0B solid;
+}
+
+.style-atila {
+  background-color: #FFD900;
+  font-family: "RocknRoll One", sans-serif;
+  border: 1px black solid;
+}
+.style-atila:hover {
+  background-color: black;
+  animation: bordeBoton 0.5s linear 0s 1;
+  color: #E6AF0B;
+  border: 3px #E6AF0B solid;
+}
+
+/*----------------FIN HEADER----------------*/
+/*----------------COMIENZO FOOTER----------------*/
+.grid-container .footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: black;
+  height: auto;
+  padding: 20px 0px;
+  grid-area: footer;
+}
+.grid-container .footer__redes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-left: 100px;
+  width: 20%;
+  height: auto;
+}
+
+/*----------------FIN FOOTER----------------*/
+/*----------------COMIENZO INDEX----------------*/
+.main-index .main-index__info {
+  display: grid;
+  grid-template-areas: "titulo     titulo" "biografia  musica";
+  grid-template-rows: auto auto;
+  grid-template-columns: 40% auto;
+  padding: 25px;
+}
+.main-index .main-index__info .tituloPrincipal {
+  grid-area: titulo;
+  font-family: "Knewave", cursive;
+  font-size: 70px;
+  letter-spacing: 5px;
+  text-align: center;
+}
+.main-index .main-index__info h2 {
+  text-align: center;
+}
+.main-index .main-index__info .main-index__biografia {
+  grid-area: biografia;
+  width: auto;
+  text-align: justify;
+  font-family: "Ranga", cursive;
+  font-size: 27px;
+}
+.main-index .main-index__musica {
+  grid-area: musica;
+}
+.main-index .main-index__musica .subtitulo {
+  grid-area: subtitulo;
+  font-family: "Bebas Neue", cursive;
+  font-size: 80px;
+  text-decoration: underline;
+  font-style: italic;
+  letter-spacing: 5px;
+  margin: 20px 0px 20px 40px;
+}
+
+/*----------------FIN INDEX----------------*/
+/*----------------COMIENZO PROX-FECHAS----------------*/
+.main-proxfechas .tituloPrincipal {
+  grid-area: titulo;
+  font-family: "Knewave", cursive;
+  font-size: 70px;
+  letter-spacing: 5px;
+  text-align: center;
+  margin-top: 20px;
+}
+.main-proxfechas .main-proxfechas__fechas, .main-proxfechas .main-proxfechas__fechas--avellaneda, .main-proxfechas .main-proxfechas__fechas--sanJusto {
+  display: grid;
+  grid-template-areas: "subtitulo  subtitulo   subtitulo" "flyer      parrafo     ubicacion" "flyer      parrafo     ubicacion" "flyer      boton       ubicacion";
+  grid-template-rows: auto auto auto auto;
+  grid-template-columns: auto auto 1fr;
+  margin-bottom: 50px;
+  margin-left: 20px;
+}
+.main-proxfechas .main-proxfechas__fechas h3, .main-proxfechas .main-proxfechas__fechas--avellaneda h3, .main-proxfechas .main-proxfechas__fechas--sanJusto h3 {
+  grid-area: subtitulo;
+  font-family: "Permanent Marker", cursive;
+  font-size: 38px;
+  letter-spacing: 3px;
+  margin: 10px 0px;
+}
+.main-proxfechas .main-proxfechas__fechas img, .main-proxfechas .main-proxfechas__fechas--avellaneda img, .main-proxfechas .main-proxfechas__fechas--sanJusto img {
+  grid-area: flyer;
+  width: 27vw;
+  height: auto;
+}
+.main-proxfechas .main-proxfechas__fechas .informacion, .main-proxfechas .main-proxfechas__fechas--avellaneda .informacion, .main-proxfechas .main-proxfechas__fechas--sanJusto .informacion {
+  grid-area: parrafo;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  font-style: italic;
+  font-family: "Permanent Marker", cursive;
+  line-height: 40px;
+  font-size: 30px;
+  letter-spacing: 3px;
+  padding: 0px 10px;
+}
+.main-proxfechas .main-proxfechas__fechas .informacion span, .main-proxfechas .main-proxfechas__fechas--avellaneda .informacion span, .main-proxfechas .main-proxfechas__fechas--sanJusto .informacion span {
+  display: block;
+}
+.main-proxfechas .main-proxfechas__fechas .informacion div, .main-proxfechas .main-proxfechas__fechas--avellaneda .informacion div, .main-proxfechas .main-proxfechas__fechas--sanJusto .informacion div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.main-proxfechas .main-proxfechas__fechas .informacion div img, .main-proxfechas .main-proxfechas__fechas--avellaneda .informacion div img, .main-proxfechas .main-proxfechas__fechas--sanJusto .informacion div img {
+  width: auto;
+  height: 100%;
+}
+.main-proxfechas .main-proxfechas__fechas .informacion div p, .main-proxfechas .main-proxfechas__fechas--avellaneda .informacion div p, .main-proxfechas .main-proxfechas__fechas--sanJusto .informacion div p {
+  margin: 0px;
+}
+.main-proxfechas .main-proxfechas__fechas .ubicacion, .main-proxfechas .main-proxfechas__fechas--avellaneda .ubicacion, .main-proxfechas .main-proxfechas__fechas--sanJusto .ubicacion {
+  grid-area: ubicacion;
+  padding-right: 20px;
+}
+.main-proxfechas .main-proxfechas__fechas .ubicacion .btn_ubicacion, .main-proxfechas .main-proxfechas__fechas--avellaneda .ubicacion .btn_ubicacion, .main-proxfechas .main-proxfechas__fechas--sanJusto .ubicacion .btn_ubicacion {
+  display: none;
+}
+.main-proxfechas .main-proxfechas__fechas .ubicacion iframe, .main-proxfechas .main-proxfechas__fechas--avellaneda .ubicacion iframe, .main-proxfechas .main-proxfechas__fechas--sanJusto .ubicacion iframe {
+  width: 100%;
+  height: 100%;
+}
+.main-proxfechas .main-proxfechas__fechas .btn_entrada, .main-proxfechas .main-proxfechas__fechas--avellaneda .btn_entrada, .main-proxfechas .main-proxfechas__fechas--sanJusto .btn_entrada {
+  grid-area: boton;
+  background-color: #FFD900;
+  color: black;
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 3px;
+  text-align: center;
+  align-self: start;
+  justify-self: left;
+  margin-top: 10px;
+  margin-left: 30px;
+  padding: 10px 10px;
+  width: auto;
+  height: auto;
+  text-decoration: none;
+}
+.main-proxfechas .main-proxfechas__fechas .btn_entrada p, .main-proxfechas .main-proxfechas__fechas--avellaneda .btn_entrada p, .main-proxfechas .main-proxfechas__fechas--sanJusto .btn_entrada p {
+  margin: 0;
+  padding: 0px 20px;
+  display: inline;
+}
+.main-proxfechas .main-proxfechas__fechas .btn_entrada img, .main-proxfechas .main-proxfechas__fechas--avellaneda .btn_entrada img, .main-proxfechas .main-proxfechas__fechas--sanJusto .btn_entrada img {
+  height: 100%;
+  width: auto;
+  transform: rotate(15deg);
+}
+.main-proxfechas .main-proxfechas__fechas .btn_entrada .icon_a_hover, .main-proxfechas .main-proxfechas__fechas--avellaneda .btn_entrada .icon_a_hover, .main-proxfechas .main-proxfechas__fechas--sanJusto .btn_entrada .icon_a_hover {
+  display: none;
+}
+.main-proxfechas .main-proxfechas__fechas .btn_entrada:hover, .main-proxfechas .main-proxfechas__fechas--avellaneda .btn_entrada:hover, .main-proxfechas .main-proxfechas__fechas--sanJusto .btn_entrada:hover {
+  background-color: black;
+  color: #E6AF0B;
+  animation: bordeBoton 0.5s linear 0s 1;
+  border: #E6AF0B 3px solid;
+}
+.main-proxfechas .main-proxfechas__fechas .btn_entrada:hover .icon_a_hover, .main-proxfechas .main-proxfechas__fechas--avellaneda .btn_entrada:hover .icon_a_hover, .main-proxfechas .main-proxfechas__fechas--sanJusto .btn_entrada:hover .icon_a_hover {
+  display: inline-block;
+  background-color: #E6AF0B;
+}
+.main-proxfechas .main-proxfechas__fechas .btn_entrada:hover .icon_a, .main-proxfechas .main-proxfechas__fechas--avellaneda .btn_entrada:hover .icon_a, .main-proxfechas .main-proxfechas__fechas--sanJusto .btn_entrada:hover .icon_a {
+  display: none;
+}
+.main-proxfechas .main-proxfechas__fechas--sanJusto .btn_entrada {
+  background-color: #FFAA0D;
+  color: #914d00;
+}
+.main-proxfechas .main-proxfechas__fechas--sanJusto .btn_entrada:hover {
+  background-color: #914d00;
+  color: #FFAA0D;
+}
+.main-proxfechas .main-proxfechas__fechas--avellaneda .btn_entrada {
+  background-color: #F5BB0C;
+  color: #795a00;
+}
+.main-proxfechas .main-proxfechas__fechas--avellaneda .btn_entrada:hover {
+  background-color: #795a00;
+  color: #F5BB0C;
+}
+
+/*----------------FIN PROX-FECHAS----------------*/
+/* ----------------MEDIA QUERIES---------------- */
+@media (min-width: 320px) and (max-width: 767px) {
+  .imagenPrincipal {
+    height: 35vh;
+    background-size: cover;
+    background-position: 40% 50%;
+  }
+  /*-------------------COMIENZO FOOTER-------------------*/
+  .grid-container .footer h4 {
+    padding-left: 10px;
+  }
+  .grid-container .footer__redes {
+    margin: 0;
+  }
+  .grid-container .footer__redes img {
+    width: 90%;
+    height: auto;
+  }
+  /*-------------------FIN FOOTER-------------------*/
+  /*-------------------COMIENZO INDEX-------------------*/
+  .main-index .main-index__info {
+    grid-template-areas: "titulo" "biografia" "musica";
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+  }
+  .main-index .main-index__info .tituloPrincipal {
+    grid-area: titulo;
+    font-family: "Knewave", cursive;
+    font-size: 70px;
+    letter-spacing: 5px;
+    text-align: center;
+    font-size: 50px;
+  }
+  .main-index .main-index__info .main-index__biografia {
+    width: auto;
+    padding: 0;
+  }
+  .main-index .main-index__info .main-index__musica .subtitulo {
+    grid-area: subtitulo;
+    font-family: "Bebas Neue", cursive;
+    font-size: 80px;
+    text-decoration: underline;
+    font-style: italic;
+    letter-spacing: 5px;
+    margin: 20px 0px 20px 40px;
+    font-size: 50px;
+    margin-left: 10px;
+  }
+  /*-------------------FIN INDEX-------------------*/
+  /*-------------------COMIENZO PROX-FECHAS-------------------*/
+  .main-proxfechas .tituloPrincipal {
+    grid-area: titulo;
+    font-family: "Knewave", cursive;
+    font-size: 70px;
+    letter-spacing: 5px;
+    text-align: center;
+    font-size: 60px;
+  }
+  .main-proxfechas .main-proxfechas__fechas, .main-proxfechas .main-proxfechas__fechas--sanJusto, .main-proxfechas .main-proxfechas__fechas--avellaneda {
+    grid-template-areas: "subtitulo" "flyer" "flyer" "parrafo" "ubicacion" "boton";
+    margin-right: 20px;
+  }
+  .main-proxfechas .main-proxfechas__fechas h3, .main-proxfechas .main-proxfechas__fechas--sanJusto h3, .main-proxfechas .main-proxfechas__fechas--avellaneda h3 {
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+  }
+  .main-proxfechas .main-proxfechas__fechas img, .main-proxfechas .main-proxfechas__fechas--sanJusto img, .main-proxfechas .main-proxfechas__fechas--avellaneda img {
+    width: 76vw;
+    justify-self: center;
+  }
+  .main-proxfechas .main-proxfechas__fechas .informacion, .main-proxfechas .main-proxfechas__fechas--sanJusto .informacion, .main-proxfechas .main-proxfechas__fechas--avellaneda .informacion {
+    justify-content: center;
+    align-items: center;
+  }
+  .main-proxfechas .main-proxfechas__fechas .informacion p, .main-proxfechas .main-proxfechas__fechas--sanJusto .informacion p, .main-proxfechas .main-proxfechas__fechas--avellaneda .informacion p {
+    font-size: 25px;
+    padding-top: 5px;
+    text-align: center;
+  }
+  .main-proxfechas .main-proxfechas__fechas .informacion span, .main-proxfechas .main-proxfechas__fechas--sanJusto .informacion span, .main-proxfechas .main-proxfechas__fechas--avellaneda .informacion span {
+    display: inline;
+  }
+  .main-proxfechas .main-proxfechas__fechas .ubicacion, .main-proxfechas .main-proxfechas__fechas--sanJusto .ubicacion, .main-proxfechas .main-proxfechas__fechas--avellaneda .ubicacion {
+    padding: 0px;
+    width: 100%;
+    max-width: 321px;
+    margin: 0 auto;
+  }
+  .main-proxfechas .main-proxfechas__fechas .ubicacion .btn_ubicacion, .main-proxfechas .main-proxfechas__fechas--sanJusto .ubicacion .btn_ubicacion, .main-proxfechas .main-proxfechas__fechas--avellaneda .ubicacion .btn_ubicacion {
+    display: block;
+    font-family: "Permanent Marker", cursive;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 25px;
+    text-decoration: none;
+    color: #E6AF0B;
+  }
+  .main-proxfechas .main-proxfechas__fechas .ubicacion .btn_ubicacion img, .main-proxfechas .main-proxfechas__fechas--sanJusto .ubicacion .btn_ubicacion img, .main-proxfechas .main-proxfechas__fechas--avellaneda .ubicacion .btn_ubicacion img {
+    height: 100%;
+    width: auto;
+    margin-bottom: 16px;
+  }
+  .main-proxfechas .main-proxfechas__fechas .ubicacion iframe, .main-proxfechas .main-proxfechas__fechas--sanJusto .ubicacion iframe, .main-proxfechas .main-proxfechas__fechas--avellaneda .ubicacion iframe {
+    display: none;
+  }
+  .main-proxfechas .main-proxfechas__fechas .btn_entrada, .main-proxfechas .main-proxfechas__fechas--sanJusto .btn_entrada, .main-proxfechas .main-proxfechas__fechas--avellaneda .btn_entrada {
+    margin: 0;
+    width: 100%;
+    width: 100%;
+    max-width: 321px;
+    margin: 0 auto;
+  }
+  /*-------------------FIN PROX-FECHAS-------------------*/
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  /*-------------------COMIENZO INDEX-------------------*/
+  .grid-container main .imagenPrincipal {
+    height: 40vh;
+  }
+  .main-index .main-index__info {
+    flex-direction: column;
+    margin: 15px;
+  }
+  .main-index .main-index__info .main-index__biografia {
+    width: auto;
+    padding: 0;
+  }
+  /*-------------------FIN INDEX-------------------*/
+  /*-------------------COMIENZO PROX-FECHAS-------------------*/
+  .main-proxfechas .main-proxfechas__fechas, .main-proxfechas .main-proxfechas__fechas--sanJusto, .main-proxfechas .main-proxfechas__fechas--avellaneda {
+    grid-template-areas: "subtitulo  subtitulo" "flyer      ubicacion" "flyer      ubicacion" "parrafo    boton";
+    grid-template-columns: 1fr 1fr;
+  }
+  .main-proxfechas .main-proxfechas__fechas img, .main-proxfechas .main-proxfechas__fechas--sanJusto img, .main-proxfechas .main-proxfechas__fechas--avellaneda img {
+    width: 80%;
+    height: auto;
+  }
+  .main-proxfechas .main-proxfechas__fechas .informacion p, .main-proxfechas .main-proxfechas__fechas--sanJusto .informacion p, .main-proxfechas .main-proxfechas__fechas--avellaneda .informacion p {
+    font-size: 25px;
+    margin: 0px;
+  }
+  .main-proxfechas .main-proxfechas__fechas .informacion span, .main-proxfechas .main-proxfechas__fechas--sanJusto .informacion span, .main-proxfechas .main-proxfechas__fechas--avellaneda .informacion span {
+    display: inline;
+  }
+  .main-proxfechas .main-proxfechas__fechas .btn_entrada, .main-proxfechas .main-proxfechas__fechas--sanJusto .btn_entrada, .main-proxfechas .main-proxfechas__fechas--avellaneda .btn_entrada {
+    align-self: center;
+  }
+  /*-------------------FIN PROXFECHAS-------------------*/
+}
+/*----------------COMIENZO KEYFRAMES----------------*/
+@keyframes imagenPrincipal {
+  0% {
+    transform: scale(0.3);
+  }
+  50% {
+    transform: scale(0.6);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes bordeBoton {
+  0% {
+    border: none;
+  }
+  10% {
+    border-top: #E6AF0B 1px groove;
+  }
+  25% {
+    border-top: #E6AF0B 3px solid;
+  }
+  35% {
+    border-right: #E6AF0B 1px groove;
+  }
+  50% {
+    border-right: #E6AF0B 3px solid;
+  }
+  60% {
+    border-bottom: #E6AF0B 1px groove;
+  }
+  75% {
+    border-bottom: #E6AF0B 3px solid;
+  }
+  85% {
+    border-left: #E6AF0B 1px groove;
+  }
+  100% {
+    border-left: #E6AF0B 3px solid;
+  }
+}
+/*----------------FIN KEYFRAMES----------------*//*# sourceMappingURL=main.css.map */

@@ -6,27 +6,27 @@
     }
     nav{
         button{
-            background-color: $colorMain;
+            background-color: map-get($palette, primary);
         }
     }
     
     .activado{
-        background-color: black;
-        color: $colorSec;
+        background-color: map-get($palette, dark);
+        color: map-get($palette, secundary);
         animation: bordeBoton .5s linear 0s 1;
-        border: 3px $colorSec solid;
+        border: 3px map-get($palette, secundary) solid;
     }
 }
 
 .style-atila{
-    background-color: $colorMain;
+    background-color: map-get($palette, primary);
     font-family: 'RocknRoll One', sans-serif;
-    border: 1px black solid;
+    border: 1px map-get($palette, dark) solid;
     &:hover{
-        background-color: black;
+        background-color: map-get($palette, dark);
         animation: bordeBoton .5s linear 0s 1;
-        color: $colorSec ;
-        border: 3px #f2ce00 solid
+        color: map-get($palette, secundary);
+        border: 3px map-get($palette, secundary) solid
     }
 }
 
