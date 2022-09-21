@@ -43,4 +43,51 @@
     }
 }
 
+@keyframes imgNosotros {
+    0% {
+        border: none;
+    }
+    10%{
+        border-top: 4px rgba(255, 255, 255, 0.767) double
+    }
+    25% {
+        border-top: 4px white double;
+    }
+    40%{
+        border-right: 4px rgba(255, 255, 255, 0.767) double
+    }
+    50% {
+        border-right: 4px white double;
+    }
+    60%{
+        border-bottom: 4px rgba(255, 255, 255, 0.767) double
+    }
+    75% {
+        border-bottom: 4px white double;
+    }
+    85%{
+        border-left: 4px rgba(255, 255, 255, 0.767) double
+    }
+    100% {
+        border-left: 4px white double;
+    }
+}
+
+@keyframes fondoRedondo {
+    0% {
+        background-color: rgba(0, 0, 0, 0);
+        transform: scale(0.7);
+    }
+
+    50% {
+        background-color: rgba(0, 0, 0, 0.514);
+        transform: scale(0.9);
+    }
+    
+    100% {
+        background-color: black;
+        transform: scale(1);
+    }
+}
+
 /*----------------FIN KEYFRAMES----------------*/

@@ -1,5 +1,4 @@
 /* ----------------MEDIA QUERIES---------------- */
-
 @media (min-width:320px) and (max-width:767px){
 
 .imagenPrincipal{ 
@@ -9,7 +8,6 @@
 }
 
     /*-------------------COMIENZO FOOTER-------------------*/
-
     .grid-container{
         .footer{
             h4{
@@ -24,11 +22,9 @@
             }
         }
     } 
-
     /*-------------------FIN FOOTER-------------------*/
 
     /*-------------------COMIENZO INDEX-------------------*/
-
     .main-index{
         & &__info{
             .tituloPrincipal{
@@ -56,8 +52,61 @@
     }
     /*-------------------FIN INDEX-------------------*/
 
-    /*-------------------COMIENZO PROX-FECHAS-------------------*/
+    /*-------------------COMIENZO NOSOTROS-------------------*/
+    .main-nosotros{
+        .tituloPrincipal{
+            @include mainTitle;
+            font-size: 42px;
+        }
+        & &__miembros{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 45px;
+            h2{
+                font-size: 30px;
+                padding: 20px 10px;
+                border-radius: 40%;
+                margin-bottom: 5px;
+            }
+            img{
+                width: 50%;
+                height: auto;
+            }
+        }
+    }
+    /*-------------------FIN NOSOTROS-------------------*/
 
+    /*-------------------COMIENZO CONCIERTOS-------------------*/
+    .main-conciertos{
+        .tituloPrincipal{
+            font-size: 45px;
+        }
+        .subtitulo{
+            font-size: 58px;
+            margin-left: 20px;
+        }
+        & &__galeriaF{
+            & .main-conciertos__fotos{
+                .foto{
+                    margin-right: 30px
+                }
+            }
+        }
+        & &__galeriaV{
+            & .main-conciertos__videos{
+                grid-template-columns: 100%;
+                grid-template-rows: repeat(6,auto);
+                iframe{
+                    width: 95%;
+                    height: 30vh;
+                }
+            }
+        }
+    }
+    /*-------------------FIN CONCIERTOS-------------------*/
+
+    /*-------------------COMIENZO PROX-FECHAS-------------------*/
     .main-proxfechas{
         .tituloPrincipal{
             @include mainTitle;
@@ -128,15 +177,76 @@
 
         }
     }
-
     /*-------------------FIN PROX-FECHAS-------------------*/
+
+    /*-------------------COMIENZO CONTACTO-------------------*/
+    .main-contacto{
+        h1{
+            font-size: 50px;
+        }
+        & &__formulario{
+            form{
+                grid-template-areas: 
+                "subtitulo"
+                "nombre"
+                "email"
+                "opciones"
+                "campoArea"
+                "campoArea"
+                "boton";
+                grid-template-columns: 100%;
+                justify-items: center;
+                padding: 0px;
+                row-gap: 20px;
+                h2{
+                    font-size: 30px;
+                    letter-spacing: 1px;
+                    span{
+                        font-size: 20px;
+                    }
+                }
+                .button{
+                    flex-direction: row;
+                    justify-content: center;
+                    width: 100%;
+                    input{
+                        font-size: 20px;
+                        padding: 7px;
+                        margin-right: 7px;
+                    }
+                }
+            }
+        }
+    }
+    /*-------------------FIN CONTACTO-------------------*/
 }
- 
+
+/*-------------- COMIENZO GALERIA DE CONCIERTOS-------------- */
+@media (min-width:700px){
+    .main-conciertos{
+        & &__galeriaF{
+            & .main-conciertos__fotos{
+                .tall{
+                    grid-row: span 2;
+                }
+                .wide{
+                    grid-column: span 2;
+                }
+                .giant{
+                    grid-column: span 2;
+                    grid-row: span 2;
+                }.no-small{
+                    display: block;
+                }
+            }
+        }
+    }
+}
+/*-------------- FIN GALERIA DE CONCIERTOS-------------- */
 
 @media (min-width:768px) and (max-width:1024px){
 
     /*-------------------COMIENZO INDEX-------------------*/
-
     .grid-container{
         main{
             .imagenPrincipal{
@@ -154,11 +264,37 @@
             }
         }
     }
-
     /*-------------------FIN INDEX-------------------*/
 
-    /*-------------------COMIENZO PROX-FECHAS-------------------*/
+    /*-------------------COMIENZO NOSOTROS-------------------*/
+    .main-nosotros{
+        & &__miembros{
+            h2{
+                font-size: 40px;
+                padding: 70px 10px;
+            }
+            img{
+                margin-right: 10px;
+            }
+        }
+        & &__miembros--reverse{
+            img{
+                margin-right: 0px;
+                margin-left: 10px;
+            }
+        }  
+    }
+    /*-------------------FIN NOSOTROS-------------------*/
 
+    /*-------------------COMIENZO CONCIERTOS-------------------*/
+    .main-conciertos{
+        iframe{
+            height: auto;
+        }
+    }
+    /*-------------------FIN CONCIERTOS-------------------*/
+
+    /*-------------------COMIENZO PROX-FECHAS-------------------*/
     .main-proxfechas{
         & &__fechas{
             grid-template-areas: 
@@ -185,7 +321,22 @@
             }
         }
     }
-
     /*-------------------FIN PROXFECHAS-------------------*/
 
+    /*-------------------COMIENZO CONTACTO-------------------*/
+    .main-contacto{
+        & &__formulario{
+            form{
+                h2{
+                    font-size: 30px;
+                    letter-spacing: 1px;
+                    margin-right: 20px;
+                    span{
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+    /*-------------------FIN CONTACTO-------------------*/
 }

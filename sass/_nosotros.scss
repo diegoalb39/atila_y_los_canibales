@@ -1,0 +1,47 @@
+/*----------------COMIENZO NOSOTROS----------------*/
+.main-nosotros{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .tituloPrincipal{
+        @include mainTitle;
+        margin: 20px 0px;
+    }
+    & &__miembros{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 30px;
+        h2{
+            font-family: 'Permanent Marker', cursive;
+            font-size: 60px;
+            letter-spacing: 3px;
+            color: white;
+            padding: 70px 20px;
+            background-color: map-get($palette, dark);
+            border-radius: 50%;
+            text-align: center;
+            animation: fondoRedondo 1s linear 0s 1;
+        }
+        span{
+            font-style: italic;
+            font-family: 'Oregano', cursive;
+        }
+        img{
+            animation: imgNosotros 1s linear 0s 1;
+            border: 4px white solid;
+            margin-right: 5px;
+        }
+    }
+    & &__miembros--reverse{
+        @extend .main-nosotros__miembros;
+        flex-direction: row-reverse;
+        img{
+            margin-right: 0px;
+        }
+    }
+}
+/*----------------FIN NOSOTROS----------------*/

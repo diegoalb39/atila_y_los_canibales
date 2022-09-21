@@ -1,0 +1,69 @@
+/*----------------COMIENZO CONTACTO----------------*/
+.main-contacto{
+    h1{
+        @include mainTitle;
+        margin-top: 20px;
+    }
+    & &__formulario{
+        form{
+            display: grid;
+            grid-template-areas: 
+            "nombre         ."
+            "email          ."
+            "opciones       subtitulo"
+            "campoArea      boton"
+            "campoArea      boton";
+            grid-template-columns: auto auto;
+            grid-template-rows: auto auto auto auto auto;
+            gap: 15px;
+            margin: 30px 0px;
+            padding-left: 20px;
+            h2{
+                grid-area: subtitulo;
+                font-size: 40px;
+                text-align: center;
+                letter-spacing: 4px;
+                span{
+                    display: block;
+                    margin-top: 5px;
+                    font-style: italic;
+                    letter-spacing: 1px;
+                    font-size: 30px;
+                }
+            }
+            @each $nombre, $valor in $form {
+                .#{$nombre} {
+                    grid-area: $valor;
+                }
+            }
+            & .main-contacto__sexo{
+                grid-area: opciones;
+                font-size: 25px;
+                font-family: 'Bebas Neue', cursive;
+                align-self: center;
+            }
+            & .button{
+                grid-area: boton;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-start;
+                input{
+                    @include input;
+                    &:hover{
+                        background-color: map-get($palette, dark);
+                        color: map-get($palette, secundary);
+                        animation: bordeBoton .5s linear 0s 1;
+                        border: map-get($palette, secundary) 3px solid;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+/*----------------FIN CONTACTO----------------*/

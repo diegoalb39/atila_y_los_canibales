@@ -42,6 +42,7 @@ body {
 
 .style-atila {
   background-color: #FFD900;
+  color: black;
   font-family: "RocknRoll One", sans-serif;
   border: 1px black solid;
 }
@@ -113,6 +114,124 @@ body {
 }
 
 /*----------------FIN INDEX----------------*/
+/*----------------COMIENZO NOSOTROS----------------*/
+.main-nosotros {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-nosotros .tituloPrincipal {
+  grid-area: titulo;
+  font-family: "Knewave", cursive;
+  font-size: 70px;
+  letter-spacing: 5px;
+  text-align: center;
+  margin: 20px 0px;
+}
+.main-nosotros .main-nosotros__miembros, .main-nosotros .main-nosotros__miembros--reverse {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.main-nosotros .main-nosotros__miembros h2, .main-nosotros .main-nosotros__miembros--reverse h2 {
+  font-family: "Permanent Marker", cursive;
+  font-size: 60px;
+  letter-spacing: 3px;
+  color: white;
+  padding: 70px 20px;
+  background-color: black;
+  border-radius: 50%;
+  text-align: center;
+  animation: fondoRedondo 1s linear 0s 1;
+}
+.main-nosotros .main-nosotros__miembros span, .main-nosotros .main-nosotros__miembros--reverse span {
+  font-style: italic;
+  font-family: "Oregano", cursive;
+}
+.main-nosotros .main-nosotros__miembros img, .main-nosotros .main-nosotros__miembros--reverse img {
+  animation: imgNosotros 1s linear 0s 1;
+  border: 4px white solid;
+  margin-right: 5px;
+}
+.main-nosotros .main-nosotros__miembros--reverse {
+  flex-direction: row-reverse;
+}
+.main-nosotros .main-nosotros__miembros--reverse img {
+  margin-right: 0px;
+}
+
+/*----------------FIN NOSOTROS----------------*/
+/*----------------COMIENZO CONCIERTOS----------------*/
+.main-conciertos {
+  height: 100%;
+  display: grid;
+  grid-template-areas: "titulo" "galeriaF" "galeriaV";
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto auto;
+  padding-bottom: 50px;
+}
+.main-conciertos .tituloPrincipal {
+  grid-area: titulo;
+  font-family: "Knewave", cursive;
+  font-size: 70px;
+  letter-spacing: 5px;
+  text-align: center;
+  margin-top: 20px;
+}
+.main-conciertos .subtitulo {
+  grid-area: subtitulo;
+  font-family: "Bebas Neue", cursive;
+  font-size: 80px;
+  text-decoration: underline;
+  font-style: italic;
+  letter-spacing: 5px;
+  margin: 20px 0px 20px 40px;
+}
+.main-conciertos .main-conciertos__galeriaF {
+  grid-area: galeriaF;
+}
+.main-conciertos .main-conciertos__galeriaF .main-conciertos__fotos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, auto));
+  grid-auto-rows: minmax(300px, auto);
+  gap: 20px;
+  padding: 20px;
+  grid-auto-flow: dense;
+}
+.main-conciertos .main-conciertos__galeriaF .main-conciertos__fotos .foto {
+  border: white 2px solid;
+  transition: 0.5s;
+}
+.main-conciertos .main-conciertos__galeriaF .main-conciertos__fotos .foto img {
+  width: 100%;
+  height: 100%;
+}
+.main-conciertos .main-conciertos__galeriaF .main-conciertos__fotos .foto:hover {
+  transform: scale(1.04);
+}
+.main-conciertos .main-conciertos__galeriaF .main-conciertos__fotos .no-small {
+  display: none;
+}
+.main-conciertos .main-conciertos__galeriaV {
+  grid-area: galeriaV;
+}
+.main-conciertos .main-conciertos__galeriaV .main-conciertos__videos {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto auto;
+  row-gap: 50px;
+}
+.main-conciertos .main-conciertos__galeriaV .main-conciertos__videos iframe {
+  justify-self: center;
+  width: 40vw;
+  height: 50vh;
+}
+
+/*----------------FIN CONCIERTOS----------------*/
 /*----------------COMIENZO PROX-FECHAS----------------*/
 .main-proxfechas .tituloPrincipal {
   grid-area: titulo;
@@ -122,7 +241,7 @@ body {
   text-align: center;
   margin-top: 20px;
 }
-.main-proxfechas .main-proxfechas__fechas, .main-proxfechas .main-proxfechas__fechas--avellaneda, .main-proxfechas .main-proxfechas__fechas--sanJusto {
+.main-proxfechas .main-proxfechas__fechas {
   display: grid;
   grid-template-areas: "subtitulo  subtitulo   subtitulo" "flyer      parrafo     ubicacion" "flyer      parrafo     ubicacion" "flyer      boton       ubicacion";
   grid-template-rows: auto auto auto auto;
@@ -130,19 +249,19 @@ body {
   margin-bottom: 50px;
   margin-left: 20px;
 }
-.main-proxfechas .main-proxfechas__fechas h3, .main-proxfechas .main-proxfechas__fechas--avellaneda h3, .main-proxfechas .main-proxfechas__fechas--sanJusto h3 {
+.main-proxfechas .main-proxfechas__fechas h3 {
   grid-area: subtitulo;
   font-family: "Permanent Marker", cursive;
   font-size: 38px;
   letter-spacing: 3px;
   margin: 10px 0px;
 }
-.main-proxfechas .main-proxfechas__fechas img, .main-proxfechas .main-proxfechas__fechas--avellaneda img, .main-proxfechas .main-proxfechas__fechas--sanJusto img {
+.main-proxfechas .main-proxfechas__fechas img {
   grid-area: flyer;
   width: 27vw;
   height: auto;
 }
-.main-proxfechas .main-proxfechas__fechas .informacion, .main-proxfechas .main-proxfechas__fechas--avellaneda .informacion, .main-proxfechas .main-proxfechas__fechas--sanJusto .informacion {
+.main-proxfechas .main-proxfechas__fechas .informacion {
   grid-area: parrafo;
   display: flex;
   flex-direction: column;
@@ -156,34 +275,34 @@ body {
   letter-spacing: 3px;
   padding: 0px 10px;
 }
-.main-proxfechas .main-proxfechas__fechas .informacion span, .main-proxfechas .main-proxfechas__fechas--avellaneda .informacion span, .main-proxfechas .main-proxfechas__fechas--sanJusto .informacion span {
+.main-proxfechas .main-proxfechas__fechas .informacion span {
   display: block;
 }
-.main-proxfechas .main-proxfechas__fechas .informacion div, .main-proxfechas .main-proxfechas__fechas--avellaneda .informacion div, .main-proxfechas .main-proxfechas__fechas--sanJusto .informacion div {
+.main-proxfechas .main-proxfechas__fechas .informacion div {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-.main-proxfechas .main-proxfechas__fechas .informacion div img, .main-proxfechas .main-proxfechas__fechas--avellaneda .informacion div img, .main-proxfechas .main-proxfechas__fechas--sanJusto .informacion div img {
+.main-proxfechas .main-proxfechas__fechas .informacion div img {
   width: auto;
   height: 100%;
 }
-.main-proxfechas .main-proxfechas__fechas .informacion div p, .main-proxfechas .main-proxfechas__fechas--avellaneda .informacion div p, .main-proxfechas .main-proxfechas__fechas--sanJusto .informacion div p {
+.main-proxfechas .main-proxfechas__fechas .informacion div p {
   margin: 0px;
 }
-.main-proxfechas .main-proxfechas__fechas .ubicacion, .main-proxfechas .main-proxfechas__fechas--avellaneda .ubicacion, .main-proxfechas .main-proxfechas__fechas--sanJusto .ubicacion {
+.main-proxfechas .main-proxfechas__fechas .ubicacion {
   grid-area: ubicacion;
   padding-right: 20px;
 }
-.main-proxfechas .main-proxfechas__fechas .ubicacion .btn_ubicacion, .main-proxfechas .main-proxfechas__fechas--avellaneda .ubicacion .btn_ubicacion, .main-proxfechas .main-proxfechas__fechas--sanJusto .ubicacion .btn_ubicacion {
+.main-proxfechas .main-proxfechas__fechas .ubicacion .btn_ubicacion {
   display: none;
 }
-.main-proxfechas .main-proxfechas__fechas .ubicacion iframe, .main-proxfechas .main-proxfechas__fechas--avellaneda .ubicacion iframe, .main-proxfechas .main-proxfechas__fechas--sanJusto .ubicacion iframe {
+.main-proxfechas .main-proxfechas__fechas .ubicacion iframe {
   width: 100%;
   height: 100%;
 }
-.main-proxfechas .main-proxfechas__fechas .btn_entrada, .main-proxfechas .main-proxfechas__fechas--avellaneda .btn_entrada, .main-proxfechas .main-proxfechas__fechas--sanJusto .btn_entrada {
+.main-proxfechas .main-proxfechas__fechas .btn_entrada {
   grid-area: boton;
   background-color: #FFD900;
   color: black;
@@ -199,50 +318,106 @@ body {
   height: auto;
   text-decoration: none;
 }
-.main-proxfechas .main-proxfechas__fechas .btn_entrada p, .main-proxfechas .main-proxfechas__fechas--avellaneda .btn_entrada p, .main-proxfechas .main-proxfechas__fechas--sanJusto .btn_entrada p {
+.main-proxfechas .main-proxfechas__fechas .btn_entrada p {
   margin: 0;
   padding: 0px 20px;
   display: inline;
 }
-.main-proxfechas .main-proxfechas__fechas .btn_entrada img, .main-proxfechas .main-proxfechas__fechas--avellaneda .btn_entrada img, .main-proxfechas .main-proxfechas__fechas--sanJusto .btn_entrada img {
+.main-proxfechas .main-proxfechas__fechas .btn_entrada img {
   height: 100%;
   width: auto;
   transform: rotate(15deg);
 }
-.main-proxfechas .main-proxfechas__fechas .btn_entrada .icon_a_hover, .main-proxfechas .main-proxfechas__fechas--avellaneda .btn_entrada .icon_a_hover, .main-proxfechas .main-proxfechas__fechas--sanJusto .btn_entrada .icon_a_hover {
+.main-proxfechas .main-proxfechas__fechas .btn_entrada .icon_a_hover {
   display: none;
 }
-.main-proxfechas .main-proxfechas__fechas .btn_entrada:hover, .main-proxfechas .main-proxfechas__fechas--avellaneda .btn_entrada:hover, .main-proxfechas .main-proxfechas__fechas--sanJusto .btn_entrada:hover {
+.main-proxfechas .main-proxfechas__fechas .btn_entrada:hover {
   background-color: black;
   color: #E6AF0B;
   animation: bordeBoton 0.5s linear 0s 1;
   border: #E6AF0B 3px solid;
 }
-.main-proxfechas .main-proxfechas__fechas .btn_entrada:hover .icon_a_hover, .main-proxfechas .main-proxfechas__fechas--avellaneda .btn_entrada:hover .icon_a_hover, .main-proxfechas .main-proxfechas__fechas--sanJusto .btn_entrada:hover .icon_a_hover {
+.main-proxfechas .main-proxfechas__fechas .btn_entrada:hover .icon_a_hover {
   display: inline-block;
   background-color: #E6AF0B;
 }
-.main-proxfechas .main-proxfechas__fechas .btn_entrada:hover .icon_a, .main-proxfechas .main-proxfechas__fechas--avellaneda .btn_entrada:hover .icon_a, .main-proxfechas .main-proxfechas__fechas--sanJusto .btn_entrada:hover .icon_a {
+.main-proxfechas .main-proxfechas__fechas .btn_entrada:hover .icon_a {
   display: none;
-}
-.main-proxfechas .main-proxfechas__fechas--sanJusto .btn_entrada {
-  background-color: #FFAA0D;
-  color: #914d00;
-}
-.main-proxfechas .main-proxfechas__fechas--sanJusto .btn_entrada:hover {
-  background-color: #914d00;
-  color: #FFAA0D;
-}
-.main-proxfechas .main-proxfechas__fechas--avellaneda .btn_entrada {
-  background-color: #F5BB0C;
-  color: #795a00;
-}
-.main-proxfechas .main-proxfechas__fechas--avellaneda .btn_entrada:hover {
-  background-color: #795a00;
-  color: #F5BB0C;
 }
 
 /*----------------FIN PROX-FECHAS----------------*/
+/*----------------COMIENZO CONTACTO----------------*/
+.main-contacto h1 {
+  grid-area: titulo;
+  font-family: "Knewave", cursive;
+  font-size: 70px;
+  letter-spacing: 5px;
+  text-align: center;
+  margin-top: 20px;
+}
+.main-contacto .main-contacto__formulario form {
+  display: grid;
+  grid-template-areas: "nombre         ." "email          ." "opciones       subtitulo" "campoArea      boton" "campoArea      boton";
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto auto auto;
+  gap: 15px;
+  margin: 30px 0px;
+  padding-left: 20px;
+}
+.main-contacto .main-contacto__formulario form h2 {
+  grid-area: subtitulo;
+  font-size: 40px;
+  text-align: center;
+  letter-spacing: 4px;
+}
+.main-contacto .main-contacto__formulario form h2 span {
+  display: block;
+  margin-top: 5px;
+  font-style: italic;
+  letter-spacing: 1px;
+  font-size: 30px;
+}
+.main-contacto .main-contacto__formulario form .nombre {
+  grid-area: nombre;
+}
+.main-contacto .main-contacto__formulario form .email {
+  grid-area: email;
+}
+.main-contacto .main-contacto__formulario form .campoArea {
+  grid-area: campoArea;
+}
+.main-contacto .main-contacto__formulario form .main-contacto__sexo {
+  grid-area: opciones;
+  font-size: 25px;
+  font-family: "Bebas Neue", cursive;
+  align-self: center;
+}
+.main-contacto .main-contacto__formulario form .button {
+  grid-area: boton;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.main-contacto .main-contacto__formulario form .button input {
+  background-color: #FFD900;
+  color: black;
+  font-family: "Bebas Neue", cursive;
+  border: 2px black solid;
+  font-size: 30px;
+  text-align: left;
+  margin-bottom: 10px;
+  cursor: pointer;
+  padding: 10px;
+}
+.main-contacto .main-contacto__formulario form .button input:hover {
+  background-color: black;
+  color: #E6AF0B;
+  animation: bordeBoton 0.5s linear 0s 1;
+  border: #E6AF0B 3px solid;
+}
+
+/*----------------FIN CONTACTO----------------*/
 /* ----------------MEDIA QUERIES---------------- */
 @media (min-width: 320px) and (max-width: 767px) {
   .imagenPrincipal {
@@ -292,6 +467,52 @@ body {
     margin-left: 10px;
   }
   /*-------------------FIN INDEX-------------------*/
+  /*-------------------COMIENZO NOSOTROS-------------------*/
+  .main-nosotros .tituloPrincipal {
+    grid-area: titulo;
+    font-family: "Knewave", cursive;
+    font-size: 70px;
+    letter-spacing: 5px;
+    text-align: center;
+    font-size: 42px;
+  }
+  .main-nosotros .main-nosotros__miembros, .main-nosotros .main-nosotros__miembros--reverse {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 45px;
+  }
+  .main-nosotros .main-nosotros__miembros h2, .main-nosotros .main-nosotros__miembros--reverse h2 {
+    font-size: 30px;
+    padding: 20px 10px;
+    border-radius: 40%;
+    margin-bottom: 5px;
+  }
+  .main-nosotros .main-nosotros__miembros img, .main-nosotros .main-nosotros__miembros--reverse img {
+    width: 50%;
+    height: auto;
+  }
+  /*-------------------FIN NOSOTROS-------------------*/
+  /*-------------------COMIENZO CONCIERTOS-------------------*/
+  .main-conciertos .tituloPrincipal {
+    font-size: 45px;
+  }
+  .main-conciertos .subtitulo {
+    font-size: 58px;
+    margin-left: 20px;
+  }
+  .main-conciertos .main-conciertos__galeriaF .main-conciertos__fotos .foto {
+    margin-right: 30px;
+  }
+  .main-conciertos .main-conciertos__galeriaV .main-conciertos__videos {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(6, auto);
+  }
+  .main-conciertos .main-conciertos__galeriaV .main-conciertos__videos iframe {
+    width: 95%;
+    height: 30vh;
+  }
+  /*-------------------FIN CONCIERTOS-------------------*/
   /*-------------------COMIENZO PROX-FECHAS-------------------*/
   .main-proxfechas .tituloPrincipal {
     grid-area: titulo;
@@ -301,38 +522,38 @@ body {
     text-align: center;
     font-size: 60px;
   }
-  .main-proxfechas .main-proxfechas__fechas, .main-proxfechas .main-proxfechas__fechas--sanJusto, .main-proxfechas .main-proxfechas__fechas--avellaneda {
+  .main-proxfechas .main-proxfechas__fechas {
     grid-template-areas: "subtitulo" "flyer" "flyer" "parrafo" "ubicacion" "boton";
     margin-right: 20px;
   }
-  .main-proxfechas .main-proxfechas__fechas h3, .main-proxfechas .main-proxfechas__fechas--sanJusto h3, .main-proxfechas .main-proxfechas__fechas--avellaneda h3 {
+  .main-proxfechas .main-proxfechas__fechas h3 {
     font-size: 30px;
     width: 100%;
     text-align: center;
   }
-  .main-proxfechas .main-proxfechas__fechas img, .main-proxfechas .main-proxfechas__fechas--sanJusto img, .main-proxfechas .main-proxfechas__fechas--avellaneda img {
+  .main-proxfechas .main-proxfechas__fechas img {
     width: 76vw;
     justify-self: center;
   }
-  .main-proxfechas .main-proxfechas__fechas .informacion, .main-proxfechas .main-proxfechas__fechas--sanJusto .informacion, .main-proxfechas .main-proxfechas__fechas--avellaneda .informacion {
+  .main-proxfechas .main-proxfechas__fechas .informacion {
     justify-content: center;
     align-items: center;
   }
-  .main-proxfechas .main-proxfechas__fechas .informacion p, .main-proxfechas .main-proxfechas__fechas--sanJusto .informacion p, .main-proxfechas .main-proxfechas__fechas--avellaneda .informacion p {
+  .main-proxfechas .main-proxfechas__fechas .informacion p {
     font-size: 25px;
     padding-top: 5px;
     text-align: center;
   }
-  .main-proxfechas .main-proxfechas__fechas .informacion span, .main-proxfechas .main-proxfechas__fechas--sanJusto .informacion span, .main-proxfechas .main-proxfechas__fechas--avellaneda .informacion span {
+  .main-proxfechas .main-proxfechas__fechas .informacion span {
     display: inline;
   }
-  .main-proxfechas .main-proxfechas__fechas .ubicacion, .main-proxfechas .main-proxfechas__fechas--sanJusto .ubicacion, .main-proxfechas .main-proxfechas__fechas--avellaneda .ubicacion {
+  .main-proxfechas .main-proxfechas__fechas .ubicacion {
     padding: 0px;
     width: 100%;
     max-width: 321px;
     margin: 0 auto;
   }
-  .main-proxfechas .main-proxfechas__fechas .ubicacion .btn_ubicacion, .main-proxfechas .main-proxfechas__fechas--sanJusto .ubicacion .btn_ubicacion, .main-proxfechas .main-proxfechas__fechas--avellaneda .ubicacion .btn_ubicacion {
+  .main-proxfechas .main-proxfechas__fechas .ubicacion .btn_ubicacion {
     display: block;
     font-family: "Permanent Marker", cursive;
     display: flex;
@@ -343,15 +564,15 @@ body {
     text-decoration: none;
     color: #E6AF0B;
   }
-  .main-proxfechas .main-proxfechas__fechas .ubicacion .btn_ubicacion img, .main-proxfechas .main-proxfechas__fechas--sanJusto .ubicacion .btn_ubicacion img, .main-proxfechas .main-proxfechas__fechas--avellaneda .ubicacion .btn_ubicacion img {
+  .main-proxfechas .main-proxfechas__fechas .ubicacion .btn_ubicacion img {
     height: 100%;
     width: auto;
     margin-bottom: 16px;
   }
-  .main-proxfechas .main-proxfechas__fechas .ubicacion iframe, .main-proxfechas .main-proxfechas__fechas--sanJusto .ubicacion iframe, .main-proxfechas .main-proxfechas__fechas--avellaneda .ubicacion iframe {
+  .main-proxfechas .main-proxfechas__fechas .ubicacion iframe {
     display: none;
   }
-  .main-proxfechas .main-proxfechas__fechas .btn_entrada, .main-proxfechas .main-proxfechas__fechas--sanJusto .btn_entrada, .main-proxfechas .main-proxfechas__fechas--avellaneda .btn_entrada {
+  .main-proxfechas .main-proxfechas__fechas .btn_entrada {
     margin: 0;
     width: 100%;
     width: 100%;
@@ -359,7 +580,53 @@ body {
     margin: 0 auto;
   }
   /*-------------------FIN PROX-FECHAS-------------------*/
+  /*-------------------COMIENZO CONTACTO-------------------*/
+  .main-contacto h1 {
+    font-size: 50px;
+  }
+  .main-contacto .main-contacto__formulario form {
+    grid-template-areas: "subtitulo" "nombre" "email" "opciones" "campoArea" "campoArea" "boton";
+    grid-template-columns: 100%;
+    justify-items: center;
+    padding: 0px;
+    row-gap: 20px;
+  }
+  .main-contacto .main-contacto__formulario form h2 {
+    font-size: 30px;
+    letter-spacing: 1px;
+  }
+  .main-contacto .main-contacto__formulario form h2 span {
+    font-size: 20px;
+  }
+  .main-contacto .main-contacto__formulario form .button {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  .main-contacto .main-contacto__formulario form .button input {
+    font-size: 20px;
+    padding: 7px;
+    margin-right: 7px;
+  }
+  /*-------------------FIN CONTACTO-------------------*/
 }
+/*-------------- COMIENZO GALERIA DE CONCIERTOS-------------- */
+@media (min-width: 700px) {
+  .main-conciertos .main-conciertos__galeriaF .main-conciertos__fotos .tall {
+    grid-row: span 2;
+  }
+  .main-conciertos .main-conciertos__galeriaF .main-conciertos__fotos .wide {
+    grid-column: span 2;
+  }
+  .main-conciertos .main-conciertos__galeriaF .main-conciertos__fotos .giant {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  .main-conciertos .main-conciertos__galeriaF .main-conciertos__fotos .no-small {
+    display: block;
+  }
+}
+/*-------------- FIN GALERIA DE CONCIERTOS-------------- */
 @media (min-width: 768px) and (max-width: 1024px) {
   /*-------------------COMIENZO INDEX-------------------*/
   .grid-container main .imagenPrincipal {
@@ -374,26 +641,54 @@ body {
     padding: 0;
   }
   /*-------------------FIN INDEX-------------------*/
+  /*-------------------COMIENZO NOSOTROS-------------------*/
+  .main-nosotros .main-nosotros__miembros h2, .main-nosotros .main-nosotros__miembros--reverse h2 {
+    font-size: 40px;
+    padding: 70px 10px;
+  }
+  .main-nosotros .main-nosotros__miembros img, .main-nosotros .main-nosotros__miembros--reverse img {
+    margin-right: 10px;
+  }
+  .main-nosotros .main-nosotros__miembros--reverse img {
+    margin-right: 0px;
+    margin-left: 10px;
+  }
+  /*-------------------FIN NOSOTROS-------------------*/
+  /*-------------------COMIENZO CONCIERTOS-------------------*/
+  .main-conciertos iframe {
+    height: auto;
+  }
+  /*-------------------FIN CONCIERTOS-------------------*/
   /*-------------------COMIENZO PROX-FECHAS-------------------*/
-  .main-proxfechas .main-proxfechas__fechas, .main-proxfechas .main-proxfechas__fechas--sanJusto, .main-proxfechas .main-proxfechas__fechas--avellaneda {
+  .main-proxfechas .main-proxfechas__fechas {
     grid-template-areas: "subtitulo  subtitulo" "flyer      ubicacion" "flyer      ubicacion" "parrafo    boton";
     grid-template-columns: 1fr 1fr;
   }
-  .main-proxfechas .main-proxfechas__fechas img, .main-proxfechas .main-proxfechas__fechas--sanJusto img, .main-proxfechas .main-proxfechas__fechas--avellaneda img {
+  .main-proxfechas .main-proxfechas__fechas img {
     width: 80%;
     height: auto;
   }
-  .main-proxfechas .main-proxfechas__fechas .informacion p, .main-proxfechas .main-proxfechas__fechas--sanJusto .informacion p, .main-proxfechas .main-proxfechas__fechas--avellaneda .informacion p {
+  .main-proxfechas .main-proxfechas__fechas .informacion p {
     font-size: 25px;
     margin: 0px;
   }
-  .main-proxfechas .main-proxfechas__fechas .informacion span, .main-proxfechas .main-proxfechas__fechas--sanJusto .informacion span, .main-proxfechas .main-proxfechas__fechas--avellaneda .informacion span {
+  .main-proxfechas .main-proxfechas__fechas .informacion span {
     display: inline;
   }
-  .main-proxfechas .main-proxfechas__fechas .btn_entrada, .main-proxfechas .main-proxfechas__fechas--sanJusto .btn_entrada, .main-proxfechas .main-proxfechas__fechas--avellaneda .btn_entrada {
+  .main-proxfechas .main-proxfechas__fechas .btn_entrada {
     align-self: center;
   }
   /*-------------------FIN PROXFECHAS-------------------*/
+  /*-------------------COMIENZO CONTACTO-------------------*/
+  .main-contacto .main-contacto__formulario form h2 {
+    font-size: 30px;
+    letter-spacing: 1px;
+    margin-right: 20px;
+  }
+  .main-contacto .main-contacto__formulario form h2 span {
+    font-size: 20px;
+  }
+  /*-------------------FIN CONTACTO-------------------*/
 }
 /*----------------COMIENZO KEYFRAMES----------------*/
 @keyframes imagenPrincipal {
@@ -434,6 +729,49 @@ body {
   }
   100% {
     border-left: #E6AF0B 3px solid;
+  }
+}
+@keyframes imgNosotros {
+  0% {
+    border: none;
+  }
+  10% {
+    border-top: 4px rgba(255, 255, 255, 0.767) double;
+  }
+  25% {
+    border-top: 4px white double;
+  }
+  40% {
+    border-right: 4px rgba(255, 255, 255, 0.767) double;
+  }
+  50% {
+    border-right: 4px white double;
+  }
+  60% {
+    border-bottom: 4px rgba(255, 255, 255, 0.767) double;
+  }
+  75% {
+    border-bottom: 4px white double;
+  }
+  85% {
+    border-left: 4px rgba(255, 255, 255, 0.767) double;
+  }
+  100% {
+    border-left: 4px white double;
+  }
+}
+@keyframes fondoRedondo {
+  0% {
+    background-color: rgba(0, 0, 0, 0);
+    transform: scale(0.7);
+  }
+  50% {
+    background-color: rgba(0, 0, 0, 0.514);
+    transform: scale(0.9);
+  }
+  100% {
+    background-color: black;
+    transform: scale(1);
   }
 }
 /*----------------FIN KEYFRAMES----------------*//*# sourceMappingURL=main.css.map */

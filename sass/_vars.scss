@@ -3,11 +3,24 @@ $palette: (
     primary: #FFD900,
     secundary: #E6AF0B,
     dark: black,
-    primarySanJusto: #914d00,
-    secundarySanJusto: #FFAA0D,
-    primaryAvellaneda: #795a00,
-    secundaryAvellaneda: #F5BB0C
 );
+$form: (
+    nombre: nombre,
+    email: email,
+    campoArea: campoArea
+);
+
+@mixin input {
+    background-color: map-get($palette, primary);
+    color: map-get($palette, dark);
+    font-family: 'Bebas Neue', cursive;
+    border: 2px map-get($palette, dark) solid;
+    font-size: 30px;
+    text-align: left;
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 10px;
+}
 
 @mixin mainImg {
     width: 100%;

@@ -20,6 +20,7 @@
 
 .style-atila{
     background-color: map-get($palette, primary);
+    color: map-get($palette, dark);
     font-family: 'RocknRoll One', sans-serif;
     border: 1px map-get($palette, dark) solid;
     &:hover{

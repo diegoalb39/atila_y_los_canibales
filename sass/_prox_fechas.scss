@@ -1,5 +1,4 @@
 /*----------------COMIENZO PROX-FECHAS----------------*/
-
 .main-proxfechas{
     .tituloPrincipal{
         @include mainTitle;
@@ -113,28 +112,5 @@
 
         }
     }
-    & &__fechas--sanJusto{
-        @extend .main-proxfechas__fechas;
-        & .btn_entrada{
-            background-color: map-get($palette, secundarySanJusto);
-            color: map-get($palette, primarySanJusto);
-            &:hover{
-                background-color: map-get($palette, primarySanJusto);
-                color: map-get($palette, secundarySanJusto);
-            }
-        }
-    }
-    & &__fechas--avellaneda{
-        @extend .main-proxfechas__fechas;
-        & .btn_entrada{
-            background-color: map-get($palette, secundaryAvellaneda);
-            color: map-get($palette, primaryAvellaneda);
-            &:hover{
-                background-color: map-get($palette, primaryAvellaneda);
-                color: map-get($palette, secundaryAvellaneda);
-            }
-        }
-    }
 }
-
 /*----------------FIN PROX-FECHAS----------------*/
