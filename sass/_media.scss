@@ -69,16 +69,12 @@
                 border-radius: 40%;
                 margin-bottom: 5px;
             }
-            img{
-                width: 50%;
-                height: auto;
-            }
         }
     }
     /*-------------------FIN NOSOTROS-------------------*/
 
-    /*-------------------COMIENZO CONCIERTOS-------------------*/
-    .main-conciertos{
+    /*-------------------COMIENZO GALERÍA-------------------*/
+    .main-galeria{
         .tituloPrincipal{
             font-size: 45px;
         }
@@ -86,25 +82,18 @@
             font-size: 58px;
             margin-left: 20px;
         }
-        & &__galeriaF{
-            & .main-conciertos__fotos{
-                .foto{
-                    margin-right: 30px
-                }
-            }
-        }
-        & &__galeriaV{
-            & .main-conciertos__videos{
+        & &__galV{
+            & .main-galeria__videos{
                 grid-template-columns: 100%;
                 grid-template-rows: repeat(6,auto);
                 iframe{
-                    width: 95%;
-                    height: 30vh;
+                    width: 90%;
+                    height: 45vh;
                 }
             }
         }
     }
-    /*-------------------FIN CONCIERTOS-------------------*/
+    /*-------------------FIN GALERÍA-------------------*/
 
     /*-------------------COMIENZO PROX-FECHAS-------------------*/
     .main-proxfechas{
@@ -221,11 +210,11 @@
     /*-------------------FIN CONTACTO-------------------*/
 }
 
-/*-------------- COMIENZO GALERIA DE CONCIERTOS-------------- */
+/*-------------- COMIENZO GALERIA DE FOTOS-------------- */
 @media (min-width:700px){
-    .main-conciertos{
-        & &__galeriaF{
-            & .main-conciertos__fotos{
+    .main-galeria{
+        & &__galF{
+            & .main-galeria__fotos{
                 .tall{
                     grid-row: span 2;
                 }
@@ -242,7 +231,7 @@
         }
     }
 }
-/*-------------- FIN GALERIA DE CONCIERTOS-------------- */
+/*-------------- FIN GALERIA DE FOTOS-------------- */
 
 @media (min-width:768px) and (max-width:1024px){
 
@@ -256,6 +245,12 @@
     }
     .main-index{
         & &__info{
+            grid-template-areas:
+            "titulo"
+            "biografia"
+            "musica";
+            grid-template-columns: 100%;
+            grid-template-rows: auto auto auto;
             flex-direction: column;
             margin: 15px;
             & .main-index__biografia{
@@ -273,9 +268,6 @@
                 font-size: 40px;
                 padding: 70px 10px;
             }
-            img{
-                margin-right: 10px;
-            }
         }
         & &__miembros--reverse{
             img{
@@ -286,13 +278,13 @@
     }
     /*-------------------FIN NOSOTROS-------------------*/
 
-    /*-------------------COMIENZO CONCIERTOS-------------------*/
-    .main-conciertos{
+    /*-------------------COMIENZO GALERÍA-------------------*/
+    .main-galeria{
         iframe{
             height: auto;
         }
     }
-    /*-------------------FIN CONCIERTOS-------------------*/
+    /*-------------------FIN GALERÍA-------------------*/
 
     /*-------------------COMIENZO PROX-FECHAS-------------------*/
     .main-proxfechas{
@@ -339,4 +331,15 @@
         }
     }
     /*-------------------FIN CONTACTO-------------------*/
+}
+
+@media (min-width:990px) and (max-width:1200px){
+    .grid-container{
+        & header{
+            & span{
+                display: none;
+            }
+        }
+    }
+
 }

@@ -29,18 +29,43 @@
         span{
             font-style: italic;
             font-family: 'Oregano', cursive;
+            display: block;
         }
-        img{
+        .foto{
             animation: imgNosotros 1s linear 0s 1;
             border: 4px white solid;
-            margin-right: 5px;
+            position: relative;
+            a{
+                .ig{
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    border: {
+                        top-right-radius: 20%;
+                        top: 3px white solid;
+                        right: 3px white solid;
+                    }
+                }
+            }
+            
         }
+        
     }
     & &__miembros--reverse{
         @extend .main-nosotros__miembros;
         flex-direction: row-reverse;
-        img{
-            margin-right: 0px;
+        .foto{
+            a{
+                .ig{
+                    left: 195px;
+                    border: {
+                        top-right-radius: 0;
+                        top-left-radius: 20%;
+                        top: 3px white solid;
+                        left: 3px white solid;
+                    }
+                }
+            }
         }
     }
 }

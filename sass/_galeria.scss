@@ -1,5 +1,5 @@
-/*----------------COMIENZO CONCIERTOS----------------*/
-.main-conciertos{
+/*----------------COMIENZO GALERÍA----------------*/
+.main-galeria{
     height: 100%;
     display: grid;
     grid-template-areas: 
@@ -16,9 +16,9 @@
     .subtitulo{
         @include subtitle;
     }
-    & &__galeriaF{
+    & &__galF{
         grid-area: galeriaF;
-        & .main-conciertos__fotos{
+        & .main-galeria__fotos{
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px,auto));
             grid-auto-rows: minmax(300px,auto);
@@ -41,9 +41,9 @@
             }
         }
     }
-    & &__galeriaV{
+    & &__galV{
         grid-area: galeriaV;
-        & .main-conciertos__videos{
+        & .main-galeria__videos{
             display: grid;
             grid-template-columns: 50% 50%;
             grid-template-rows: auto auto auto;
@@ -56,8 +56,4 @@
         }
     }
 }
-
-
-
-
-/*----------------FIN CONCIERTOS----------------*/
+/*----------------FIN GALERÍA----------------*/

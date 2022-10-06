@@ -18,13 +18,21 @@
         & .main-index__biografia{
             grid-area: biografia;
             width: auto;
-            text-align: justify;           
-            font-family: 'Ranga', cursive;
+            text-align: center;           
+            font-family: 'Skranji', cursive;
             font-size: 27px;
+            a{
+                text-decoration: none;
+                color: map-get($palette, secundary);
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
         }
     }
     & &__musica{
         grid-area: musica;
+
         .subtitulo{
             @include subtitle;
         }
