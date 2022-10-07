@@ -1,11 +1,11 @@
 /* ----------------MEDIA QUERIES---------------- */
 @media (min-width:320px) and (max-width:767px){
 
-.imagenPrincipal{ 
-    height: 35vh;
-    background-size: cover;
-    background-position: 40% 50%;
-}
+    .imagenPrincipal{ 
+        height: 35vh;
+        background-size: cover;
+        background-position: 40% 50%;
+    }
 
     /*-------------------COMIENZO FOOTER-------------------*/
     .grid-container{
@@ -137,7 +137,6 @@
                 max-width: 321px;
                 margin: 0 auto;
                 & .btn_ubicacion{
-                    display: block;
                     font-family: 'Permanent Marker', cursive;
                     display: flex;
                     flex-direction: row;

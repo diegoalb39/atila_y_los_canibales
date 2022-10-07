@@ -568,7 +568,6 @@ body {
     margin: 0 auto;
   }
   .main-proxfechas .main-proxfechas__fechas .ubicacion .btn_ubicacion {
-    display: block;
     font-family: "Permanent Marker", cursive;
     display: flex;
     flex-direction: row;
